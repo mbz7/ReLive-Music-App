@@ -1,8 +1,6 @@
 class Concert < ApplicationRecord
   belongs_to :user
-  belongs_to :band
-  belongs_to :venue
-  has_many :videos
-  has_many :images
-  has_many :concert_summaries
+  has_many :videos, dependent: :destroy
+  has_many :images, dependent: :destroy
+  has_many :concert_summaries, dependent: :destroy
 end

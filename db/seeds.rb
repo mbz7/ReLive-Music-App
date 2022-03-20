@@ -11,12 +11,10 @@ ConcertSummary.destroy_all
 
 # create users
 puts 'Creating users...'
-puts
-u1 = User.create!(username: 'test1', password_digest: 'test1')
+u1 = User.create!(first_name: 'Myles', last_name: 'Bracken', profile_image_url: 'https://www.w3schools.com/howto/img_avatar.png', email: 'mylesb88@gmail.com', username: 'test1', password: 'test1')
 
 # create bands
 puts 'Creating bands...'
-puts
 b1 = Band.create!(name: 'Red Hot Chili Peppers')
 b2 = Band.create!(name: 'Twenty One Pilots')
 b3 = Band.create!(name: 'Sleep Token')
@@ -25,21 +23,18 @@ b5 = Band.create!(name: 'Veil Of Maya')
 
 # create venues
 puts 'Creating venues...'
-puts
 v1 = Venue.create!(name: 'Globe Life Field', location: 'Arlington, TX')
 v2 = Venue.create!(name: 'SoFi Stadium', location: 'Inglewood, CA')
 v3 = Venue.create!(name: 'Nationals Park', location: 'Washington, D.C.')
 
 # create concerts
 puts 'Creating concerts...'
-puts
 c1 = Concert.create!(user_id: u1,band_id: b1, venue_id: v1, date: '09/18/2022')
 c2 = Concert.create!(user_id: u1,band_id: b1, venue_id: v1, date: '09/08/2022')
 c3 = Concert.create!(user_id: u1,band_id: b1, venue_id: v1, date: '07/31/2022')
 
 # create videos
 puts 'Creating videos'
-puts
 Video.create!(
   video_url: 'https://www.youtube.com/watch?v=Gcbk4PK9GHI',
   description: 'Red Hot Chili Peppers Live 1',

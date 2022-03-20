@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
   
-  resources :users
-  resources :concert_summaries
-  resources :images
-  resources :videos
-  resources :venues
-  resources :bands
-  resources :concerts
+  resources :users, only: [:index, :show, :create]
+  resources :concert_summaries, only: [:index, :show, :create]
+  resources :images, only: [:index, :show, :create, :destroy]
+  resources :videos, only: [:index, :show, :create, :destroy]
+  resources :concerts, only: [:index, :show, :create, :destroy]
 
   # log in
   post '/login', to: 'sessions#create'
