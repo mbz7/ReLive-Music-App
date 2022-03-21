@@ -1,38 +1,255 @@
-.App {
+/* Global Styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.btn {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 0.05rem;
+}
+
+nav {
+  font-size: 18px;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 0.08rem;
+  border-right: 1px solid #ccc;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.4rem;
+  letter-spacing: 0.02rem;
+}
+
+/* Custom Styles */
+
+/* ________________________________________________________________ */
+
+/* Home Beer List Page */
+
+.container-home-fluid {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.home-jumbotron {
+  height: 300px;
+  background-color: rgb(231, 231, 231);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./img/katherine-conrad-QL3SaEwio_k-unsplash.jpeg");
+  background-size: cover;
+}
+
+.home-jumbotorn > .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.home-jumbotorn > .jumbotron-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.search-bar {
+  min-width: 450px;
+  max-width: 600px;
+  margin-top: -20px;
+}
+
+.nav-login-btn {
+  width: 90px;
+}
+
+.brewery-list-container {
+  background-color: rgb(241, 241, 241);
+}
+
+/* Home Page Brewery Card Styling */
+
+.card {
+  border-radius: 10px !important;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.card-div {
+  height: 354px;
+  max-width: 555px !important;
+  overflow: hidden !important;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-img-filter {
+  -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(80%);
+  /* background-image: url("https://cdn.wallpapersafari.com/13/52/2AyLvi.jpg"); */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-img-o {
+  background: linear-gradient(
+    to bottom,
+    rgb(49, 47, 46),
+    rgba(48, 37, 4, 0.329)
+  );
 }
 
-.App-header {
-  background-color: #282c34;
+.card-img-overlay {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.card-p-text {
+  margin-top: -25px;
+}
+
+/* Card Footer */
+
+.card-footer-div {
+  height: 100%;
+  border-top: solid 1px rgb(223, 223, 223);
+}
+
+.card-b-logo {
+  height: 100%;
+  width: auto;
+}
+
+.card-b-logo img {
+  height: 80px;
+  width: auto;
+  padding: 10px;
+}
+
+/* ________________________________________________________________ */
+
+/* login / signup styling */
+
+.body_of_form {
+  background-color: #f7a900;
+  transition: all 1s;
+  transform-origin: 0 0;
+  /* background: linear-gradient(to bottom, #bc7012, #efd002 100%); */
+  background-image: url(./img/brewery_discovery_sign-in-banner.jpg);
+  /* min-height: 100%; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-width: 100%;
   min-height: 100vh;
+}
+
+.outer-form-div {
+  height: 100vh;
+  width: 100vh;
+}
+
+.outer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.inner {
+  max-width: 450px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(178, 179, 206, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.already_have_account {
+  block-size: center;
+  text-align: center;
+}
+
+.dont_have_account {
+  block-size: center;
+  text-align: center;
+}
+
+.update_title_color {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.update_address_color {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.update_website_color {
+  color: white;
+}
+
+.update_phone_color {
+  color: white;
+}
+
+/* Beer Card */
+
+.beer-title {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Bebas Neue", cursive;
+}
+
+.beer-details {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: "Bebas Neue", cursive;
+}
+
+.beer-card-logo-div img {
+  max-height: 100px !important;
+  width: auto;
+}
+
+/* User Page */
+
+.profile-main-div {
+  position: relative;
+  top: 40px;
+  background-color: rgb(240, 240, 240);
+}
+
+.account-profile-div {
+  padding: 80px;
+  border-top: 2px solid #e4e4e4;
+  /* background-color: rgb(230, 230, 230); */
+  /* background: linear-gradient(to bottom, #d6d6d6, #afafaf 100%); */
+}
+
+.profile-edit-div {
+  max-width: 600px;
+  padding: 0 40px;
+  /* background-color: rgb(253, 253, 253); */
+}
+.user-button {
+  min-width: 100%;
+  box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.2);
+  margin-bottom: 10px;
+  height: 50px;
+  font-size: 25px !important;
+}
+
+/* styles google map */
+.google_styling {
+  height: 50vh;
+  margin: 10px 50px;
+  filter: drop-shadow(-10px 10px 3px #ccc);
+  margin-top: 15px;
+  text-align: center;
 }
