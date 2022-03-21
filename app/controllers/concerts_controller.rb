@@ -9,7 +9,7 @@ class ConcertsController < ApplicationController
 
   def show
     concert = find_concert
-    render json: concert
+    render json: concert, serializer: ConcertWithImageVideoSummarySerializerSerializer
   end
 
   def create
