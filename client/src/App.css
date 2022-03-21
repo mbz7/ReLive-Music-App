@@ -37,21 +37,22 @@ p {
 }
 
 .home-jumbotron {
-  height: 300px;
+  height: 350px;
   background-color: rgb(231, 231, 231);
   margin: 0;
   padding: 0;
   position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("./img/katherine-conrad-QL3SaEwio_k-unsplash.jpeg");
+    url("./img/yvette-de-wit-NYrVisodQ2M-unsplash.jpeg");
   background-size: cover;
+  background-position: 50% 75%;
 }
 
 .home_jumbotron_welcome-div {
   border-radius: 10px !important;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
-  margin-top: 300px;
-  padding: 50px;
+  margin-top: 350px;
+  padding: 75px;
 }
 
 .home-jumbotorn > .overlay {
@@ -68,6 +69,19 @@ p {
   z-index: 2;
 }
 
+/* .home-2-jumbo-gradient{
+    height: 50px;
+    background: #141011;
+    background: -webkit-linear-gradient(#648880, #293f50);
+    background:    -moz-linear-gradient(#648880, #293f50);
+    background:         linear-gradient(#141011, #f1f1f1);
+} */
+
+.concert-list-container {
+  background-color: rgb(241, 241, 241);
+  padding-top: 200px;
+}
+
 .search-bar {
   min-width: 450px;
   max-width: 600px;
@@ -78,10 +92,7 @@ p {
   width: 90px;
 }
 
-.concert-list-container {
-  background-color: rgb(241, 241, 241);
-  padding-top: 250px;
-}
+
 
 /* Home Page Brewery Card Styling */
 
@@ -91,7 +102,7 @@ p {
 }
 
 .card-div {
-  height: 354px;
+  height: auto;
   max-width: 555px !important;
   overflow: hidden !important;
   text-align: center;
@@ -118,6 +129,14 @@ p {
 
 .card-p-text {
   margin-top: -25px;
+}
+
+.band_card_border-right {
+  border-right: 1px solid rgb(142, 142, 142);
+}
+
+.band_card_info-right {
+  padding-left: 50px;
 }
 
 /* Card Footer */

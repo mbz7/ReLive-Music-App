@@ -26,7 +26,7 @@ function Home() {
           <div className="home-jumbotron d-flex flex-column justify-content-center">
             <div className="overlay"></div>
             <div className="jumbotron-inner text-center">
-              <Col lg={6} className="mx-auto bg-light rounded-lg home_jumbotron_welcome-div">
+              <Col lg={7} className="mx-auto bg-light rounded-lg home_jumbotron_welcome-div">
                 <div className="text-dark">
                   {/* <h2 className="p-2 text-center">
                     {currentUser ? `Hello, ${currentUser.first_name}!` : ""}
@@ -38,7 +38,7 @@ function Home() {
                     </p>
                   </Col>
                   <Col className="text-center">
-                    <Button variant="info w-25 mt-1">Add A Concert</Button>
+                    <Button variant="info w-50 mt-1 shadow-sm">Add A Concert</Button>
                   </Col>
                   {/* <Col lg={5} className="mx-auto search-bar">
                     <Search
@@ -52,6 +52,7 @@ function Home() {
               </Col>
             </div>
           </div>
+          {/* <div className="home-2-jumbo-gradient"><span></span></div> */}
           <div className="concert-list-container">
             <Container>
               <div className="text-center">

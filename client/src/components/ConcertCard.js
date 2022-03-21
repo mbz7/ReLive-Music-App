@@ -16,17 +16,20 @@ function ConcertCard({ user, band, venue, location, date }) {
           <div className="p-4 mt-2 text-dark gap-3">
             {/* <Card.ImgOverlay className="card-img-o"> */}
             <Row>
-              <Col sm={12} md={2} lg={2}>
-                <div className="bg-dark">image</div>
+              <Col md={2} lg={2} className="m-0 p-0">
+                <div className="bg-light h-100 w-100 d-flex align-items-center p-4">
+                  <h5 className="mx-auto">band logo</h5>
+                </div>
               </Col>
-              <Col className="d-flex justify-content-center">
-                <Col sm={12} md={12} lg={6} className="text-center">
+              <Col className="d-flex justify-content-center align-items-center mt-3 p-2">
+                <Col md={6} lg={6} className="text-center band_card_border-right">
+                
                   <Card.Title className="update_title_color">
-                    <h2 className="text-dark">{band}</h2>
+                    <h2 className="text-dark p-2">{band}</h2>
                   </Card.Title>
                   <Button
-                  variant="info"
-                  className="mx-auto"
+                  variant="outline-dark"
+                  className="mx-auto mt-2"
                   // as={Link}
                   // onClick={(e) => setBrewery(id)}
                   // to={`/brewery/${id}`}
@@ -34,16 +37,16 @@ function ConcertCard({ user, band, venue, location, date }) {
                   View Concert Dashboard
                 </Button>
                 </Col>
-                <Col>
-                  <Card.Text className="p-1">
+                <Col className="band_card_info-right">
+                  <Card.Text className="">
                     <strong>Venue: </strong>
                     {venue}
                   </Card.Text>
-                  <Card.Text className="p-1">
+                  <Card.Text className="">
                     <strong>Location: </strong>
                     {location}
                   </Card.Text>
-                  <Card.Text className="p-1">
+                  <Card.Text className="">
                     <strong>Date: </strong>
                     {date}
                   </Card.Text>
