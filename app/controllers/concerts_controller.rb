@@ -17,6 +17,12 @@ class ConcertsController < ApplicationController
     render json: concert, status: :created
   end
 
+  def destroy
+    concert = find_concert
+    concert.destroy
+    head :no_content
+  end
+
   private
 
   def concert_params

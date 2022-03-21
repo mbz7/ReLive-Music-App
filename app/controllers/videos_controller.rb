@@ -17,6 +17,12 @@ class VideosController < ApplicationController
     render json: video, status: :created
   end
 
+  def destroy
+    video = find_video
+    video.destroy
+    head :no_content
+  end
+
   private
 
   def video_params

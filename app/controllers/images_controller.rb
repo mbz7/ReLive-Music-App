@@ -1,5 +1,5 @@
 class ImagesController < ApplicationController
-    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+  rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
   rescue_from ActiveRecord::RecordInvalid,
               with: :render_unprocessable_entity_response
 
@@ -15,6 +15,12 @@ class ImagesController < ApplicationController
   def create
     image = Image.create!(image_params)
     render json: image, status: :created
+  end
+
+  def destroy
+    image = find_image
+    image.destroy
+    head :no_content
   end
 
   private
