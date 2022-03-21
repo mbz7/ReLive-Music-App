@@ -4,11 +4,20 @@ import { Row, Col, Container, Button } from "react-bootstrap";
 // import Search from "../components/Search";
 import { Navigate } from "react-router-dom";
 import ConcertCardList from "./ConcertCardList";
+import NewPost from "./NewPost";
 
 function Home() {
   const [concerts, setConcerts] = useState([]);
+  const [newPost, setNewPost] = useState ({})
   // const [brewerySearch, setBrewerySearch] = useState("");
   // const [stateSearch, setStateSearch] = useState("");
+
+  useEffect(() => {
+    console.log("new main get");
+    fetch("/concerts")
+      .then((r) => r.json())
+      .then((data) => setNewPost(data));
+  }, [newPost]);
 
   useEffect(() => {
     fetch("/concerts")
@@ -38,7 +47,8 @@ function Home() {
                     </p>
                   </Col>
                   <Col className="text-center">
-                    <Button variant="info w-50 mt-1 shadow-sm">Add A Concert</Button>
+                  <NewPost setNewPost={setNewPost} />
+                    
                   </Col>
                   {/* <Col lg={5} className="mx-auto search-bar">
                     <Search
