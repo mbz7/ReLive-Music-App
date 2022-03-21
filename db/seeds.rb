@@ -15,7 +15,7 @@ u1 = User.create!(username: 'test', password_digest: 'test')
 puts 'Creating concerts...'
 c1 =
   Concert.create!(
-    # user_id: u1,
+    user_id: u1.id,
     band: 'Red Hot Chili Peppers',
     venue: 'Globe Life Field',
     location: 'Arlington, TX',
@@ -23,7 +23,7 @@ c1 =
   )
 c2 =
   Concert.create!(
-    # user_id: u1,
+    user_id: u1.id,
     band: 'Red Hot Chili Peppers',
     venue: 'SoFi Stadium',
     location: 'Inglewood, CA',
@@ -31,7 +31,7 @@ c2 =
   )
 c3 =
   Concert.create!(
-    # user_id: u1,
+    user_id: u1.id,
     band: 'Red Hot Chili Peppers',
     venue: 'Nationals Park',
     location: 'Washington, D.C.',
