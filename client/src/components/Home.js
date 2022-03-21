@@ -25,21 +25,22 @@ function Home() {
         <Container fluid className="container-home-fluid bg-light">
           <div className="home-jumbotron d-flex flex-column justify-content-center">
             <div className="overlay"></div>
-            <div className="jumbotron-inner">
-              <div className="h-50 d-flex flex-column justify-content-center text-light">
-                {/* <h2 className="p-2 text-center">
+            <div className="jumbotron-inner text-center">
+              <Col lg={6} className="mx-auto bg-light rounded-lg home_jumbotron_welcome-div">
+                <div className="text-dark">
+                  {/* <h2 className="p-2 text-center">
                     {currentUser ? `Hello, ${currentUser.first_name}!` : ""}
                   </h2> */}
-                <Col className="text-center">
-                  <h1>Welcome To ReLive</h1>
-                  <p className="pt-2 text-lg">
-                    A home for all of your concert experiences
-                  </p>
-                </Col>
-                <Col className="text-center">
-                  <Button variant="info w-25 mt-1">Add A Concert</Button>
-                </Col>
-                {/* <Col lg={5} className="mx-auto search-bar">
+                  <Col className="text-center">
+                    <h1>Welcome To ReLive</h1>
+                    <p className="p-2 text-lg">
+                      A home for all of your concert experiences
+                    </p>
+                  </Col>
+                  <Col className="text-center">
+                    <Button variant="info w-25 mt-1">Add A Concert</Button>
+                  </Col>
+                  {/* <Col lg={5} className="mx-auto search-bar">
                     <Search
                       brewerySearch={brewerySearch}
                       brewerySetter={setBrewerySearch}
@@ -47,10 +48,11 @@ function Home() {
                       stateSetter={setStateSearch}
                     />
                   </Col> */}
-              </div>
+                </div>
+              </Col>
             </div>
           </div>
-          <div className="brewery-list-container pt-5">
+          <div className="concert-list-container">
             <Container>
               <div className="text-center">
                 <h3>Concert List</h3>

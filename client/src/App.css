@@ -47,6 +47,13 @@ p {
   background-size: cover;
 }
 
+.home_jumbotron_welcome-div {
+  border-radius: 10px !important;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  margin-top: 300px;
+  padding: 50px;
+}
+
 .home-jumbotorn > .overlay {
   position: absolute;
   top: 0;
@@ -71,8 +78,9 @@ p {
   width: 90px;
 }
 
-.brewery-list-container {
+.concert-list-container {
   background-color: rgb(241, 241, 241);
+  padding-top: 250px;
 }
 
 /* Home Page Brewery Card Styling */
