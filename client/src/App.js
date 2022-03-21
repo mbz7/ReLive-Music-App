@@ -9,7 +9,7 @@ import Account from "./components/Account";
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <>
         <Navbar bg="dark" variant="dark">
           <Container>
             <Navbar.Brand as={Link} to="/">
@@ -35,7 +35,7 @@ function App() {
             <Route path="/account" element={<Account />} />
           </Routes>
         </div>
-      </div>
+      </>
     </BrowserRouter>
   );
 }
