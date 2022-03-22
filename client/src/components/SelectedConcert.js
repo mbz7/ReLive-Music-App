@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Row, Container, Col } from "react-bootstrap";
+import { Row, Container, Col, Stack } from "react-bootstrap";
 import ConcertDetailList from "./selected_concert/ConcertDetailList";
 import ConcertImageList from "./selected_concert/ConcertImageList";
 // import ConcertVideoList from "./selected_concert/ConcertVideoList";
@@ -54,11 +54,18 @@ function SelectedConcert() {
   return (
     <>
       <Container>
-        
-          {/* <h1>Selected Concert Page</h1>
+        {/* <h1>Selected Concert Page</h1>
           <ConcertDetailList concert={concert} /> */}
-                  <Container><Row><ConcertImageList images={images} /></Row></Container>
-          {/* {concert.map((c) => {
+        <Col className="border p-4 mt-5">
+          <h2>IMAGES</h2>
+          <Row className="mx-auto text-center">
+            {/* <Stack direction="horizontal" gap={3}> */}
+            <ConcertImageList images={images} />
+            {/* </Stack> */}
+          </Row>
+        </Col>
+
+        {/* {concert.map((c) => {
             const allImages = c.images.map((image) => {
               return (
                 <div key={image.title}>
@@ -67,9 +74,8 @@ function SelectedConcert() {
               );
             });
           })} */}
-          {/* <ConcertVideoList videos={concert} />
+        {/* <ConcertVideoList videos={concert} />
           <ConcertSummaryList summaries={concert} /> */}
-       
       </Container>
     </>
   );

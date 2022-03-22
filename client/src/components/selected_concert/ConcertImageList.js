@@ -1,6 +1,6 @@
 import React from "react";
 import ConcertImage from "./ConcertImage";
-import { Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 function ConcertImageList({ images }) {
   return (
@@ -8,14 +8,13 @@ function ConcertImageList({ images }) {
       {images.map((image) => {
         return (
           
-            <Col>
-              <ConcertImage
-                key={image.id}
-                image={image.image_url}
-                title={image.title}
-              />
-            </Col>
-    
+              <Col>
+                <ConcertImage
+                  key={image.id}
+                  image={image.image_url}
+                  title={image.title}
+                />
+              </Col>
         );
       })}
     </>
