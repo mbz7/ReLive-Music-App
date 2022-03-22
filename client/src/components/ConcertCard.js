@@ -1,15 +1,17 @@
-import React from "react";
-import { Col, Card, Row, Button, Link } from "react-bootstrap";
+import React, { useState } from "react";
+import { Col, Card, Row, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-function ConcertCard({ user, band, venue, location, date }) {
+function ConcertCard({ user, band, venue, location, date, id, setConcerts }) {
+  // const [viewConcertId, setViewConcertId] = useState([]);
   return (
     <>
       <Col sm={12} md={12} lg={12} className="gap-3 mb-5 mt-5">
         <Card
-        //   as={Link}
-        //   className="card-div mx-auto"
-        //   onClick={(e) => setBrewery(id)}
-        //   to={`/breweries/${id}`}
+        // as={Link}
+        // className="card-div mx-auto"
+        // onClick={(e) => setBrewery(id)}
+        // to={`/breweries/${id}`}
         >
           {/* <Card.Img className="h-100 card-img-filter" src={image} alt="" /> */}
 
@@ -22,20 +24,26 @@ function ConcertCard({ user, band, venue, location, date }) {
                 </div>
               </Col>
               <Col className="d-flex justify-content-center align-items-center mt-3 p-2">
-                <Col md={6} lg={6} className="text-center band_card_border-right">
-                
+                <Col
+                  md={6}
+                  lg={6}
+                  className="text-center band_card_border-right"
+                >
                   <Card.Title className="update_title_color">
                     <h2 className="text-dark p-2">{band}</h2>
                   </Card.Title>
-                  <Button
-                  variant="outline-dark"
-                  className="mx-auto mt-2"
-                  // as={Link}
-                  // onClick={(e) => setBrewery(id)}
-                  // to={`/brewery/${id}`}
-                >
-                  View Concert Dashboard
-                </Button>
+                  {/* <Button
+                    variant="outline-dark"
+                    className="mx-auto mt-2"
+                    as={Link}
+                    onClick={(e) => setConcerts(id)}
+                    to={`/concerts/${id}`}
+                  >
+                    View Concert Dashboard
+                  </Button> */}
+                  <Link to={`/concerts/${id}`}>Link To Concert</Link>
+
+
                 </Col>
                 <Col className="band_card_info-right">
                   <Card.Text className="">
@@ -50,13 +58,12 @@ function ConcertCard({ user, band, venue, location, date }) {
                     <strong>Date: </strong>
                     {date}
                   </Card.Text>
-                  
                 </Col>
               </Col>
             </Row>
             {/* </Card.ImgOverlay> */}
           </div>
-
+          
           {/* <div className="card-footer-div text-center">
               <div className="card-b-logo bg-white mx-auto">
                 <Image className="img-fluid" src={logo} alt="" />

@@ -21,7 +21,7 @@ export default function NewPost({ setNewPost }) {
         venue: venue,
         location: location,
         date: date,
-      }),
+      })
     })
       .then((r) => r.json())
       .then((post) => setNewPost(post));

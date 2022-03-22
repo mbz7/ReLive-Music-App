@@ -1,14 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Dashboard from "./components/Dashboard";
 import Account from "./components/Account";
+import SelectedConcert from "./components/SelectedConcert";
 
 function App() {
+  const [concerts, setConcerts] = useState([]);
   return (
-    <BrowserRouter>
       <>
         <Navbar bg="dark" variant="dark">
           <Container>
@@ -30,13 +32,16 @@ function App() {
         </Navbar>
         <div>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route
+              path="/"
+              element={<Home concerts={concerts} setConcerts={setConcerts} />}
+            />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/account" element={<Account />} />
+            <Route path="/concerts/:id" element={<SelectedConcert />} />
           </Routes>
         </div>
       </>
-    </BrowserRouter>
   );
 }
 

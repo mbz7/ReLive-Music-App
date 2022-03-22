@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     end
   
     # def show
-    #   current_user = User.find([:user_id])
+    #   current_user = User.find([:id])
     #   render json: current_user, status: :ok
     # end
   

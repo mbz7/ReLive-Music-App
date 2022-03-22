@@ -6,14 +6,14 @@ import { Navigate } from "react-router-dom";
 import ConcertCardList from "./ConcertCardList";
 import NewPost from "./NewPost";
 
-function Home() {
-  const [concerts, setConcerts] = useState([]);
+function Home({concerts, setConcerts}) {
+  
   const [newPost, setNewPost] = useState ({})
   // const [brewerySearch, setBrewerySearch] = useState("");
   // const [stateSearch, setStateSearch] = useState("");
 
   useEffect(() => {
-    console.log("new main get");
+    
     fetch("/concerts")
       .then((r) => r.json())
       .then((data) => setNewPost(data));
@@ -25,7 +25,7 @@ function Home() {
       .then((concertList) => {
         setConcerts(concertList);
       });
-  }, []);
+  },[]);
 
   return (
     <>
@@ -73,7 +73,7 @@ function Home() {
 
               <Row>
                 <Col>
-                  <ConcertCardList concerts={concerts} />
+                  <ConcertCardList concerts={concerts} setConcerts={setConcerts} />
                 </Col>
               </Row>
             </Container>
