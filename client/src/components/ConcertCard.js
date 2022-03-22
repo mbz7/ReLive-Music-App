@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Col, Card, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function ConcertCard({ user, band, venue, location, date, id, setConcerts }) {
+function ConcertCard({ user, band, venue, location, date, id }) {
   // const [viewConcertId, setViewConcertId] = useState([]);
   return (
     <>
