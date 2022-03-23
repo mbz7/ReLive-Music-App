@@ -58,17 +58,17 @@ c3 =
 # create videos
 puts 'Creating videos'
 Video.create!(
-  video_url: 'https://www.youtube.com/watch?v=Gcbk4PK9GHI',
+  video_url: 'https://www.youtube.com/embed/Gcbk4PK9GHI',
   title: 'Red Hot Chili Peppers Live 1',
   concert_id: c1.id,
 )
 Video.create!(
-  video_url: 'https://www.youtube.com/watch?v=wer7Fv8EhRg',
+  video_url: 'https://www.youtube.com/embed/wer7Fv8EhRg',
   title: 'Red Hot Chili Peppers Live 2',
   concert_id: c1.id,
 )
 Video.create!(
-  video_url: 'https://www.youtube.com/watch?v=EeoYtmBTbLM',
+  video_url: 'https://www.youtube.com/embed/EeoYtmBTbLM',
   title: 'Red Hot Chili Peppers Live 2004',
   concert_id: c2.id,
 )

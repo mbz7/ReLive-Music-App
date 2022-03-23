@@ -25,7 +25,8 @@ function Home({concerts, setConcerts}) {
       .then((concertList) => {
         setConcerts(concertList);
       });
-  },[]);
+  }, []);
+ 
 
   return (
     <>
@@ -50,14 +51,6 @@ function Home({concerts, setConcerts}) {
                   <NewPost setNewPost={setNewPost} />
                     
                   </Col>
-                  {/* <Col lg={5} className="mx-auto search-bar">
-                    <Search
-                      brewerySearch={brewerySearch}
-                      brewerySetter={setBrewerySearch}
-                      stateSearch={stateSearch}
-                      stateSetter={setStateSearch}
-                    />
-                  </Col> */}
                 </div>
               </Col>
             </div>

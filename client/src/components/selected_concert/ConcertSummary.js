@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function ConcertSummary() {
-    return (
-        <>
-        <h1>Concert Summary</h1>
-        </>
-    )
+function ConcertSummary({ text }) {
+  return (
+    <>
+      <p>{text}</p>
+    </>
+  );
 }
 
-export default ConcertSummary
+export default ConcertSummary;

@@ -42,8 +42,6 @@ function ConcertCard({ user, band, venue, location, date, id }) {
                     View Concert Dashboard
                   </Button> */}
                   <Link to={`/concerts/${id}`}>Link To Concert</Link>
-
-
                 </Col>
                 <Col className="band_card_info-right">
                   <Card.Text className="">
@@ -63,7 +61,7 @@ function ConcertCard({ user, band, venue, location, date, id }) {
             </Row>
             {/* </Card.ImgOverlay> */}
           </div>
-          
+
           {/* <div className="card-footer-div text-center">
               <div className="card-b-logo bg-white mx-auto">
                 <Image className="img-fluid" src={logo} alt="" />

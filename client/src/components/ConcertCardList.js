@@ -1,6 +1,6 @@
 import React from "react";
-import { Row,Container } from "react-bootstrap";
-import ConcertCard from "./ConcertCard"
+import { Row, Container } from "react-bootstrap";
+import ConcertCard from "./ConcertCard";
 
 function ConcertCardList({ concerts, setConcerts }) {
   return (

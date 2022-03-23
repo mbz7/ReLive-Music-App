@@ -3,11 +3,13 @@ import ConcertDetail from "./ConcertDetail";
 import { Row, Container } from "react-bootstrap";
 
 function ConcertDetailList({ concert }) {
+
+  const concertArray = Object.values(concert);
   return (
     <>
       <Container>
         <Row>
-          {concert.map((c) => {
+          {/* {concert.map((c) => {
             return (
               <ConcertDetail
                 key={c.id}
@@ -19,7 +21,9 @@ function ConcertDetailList({ concert }) {
                 date={c.date}
               />
             );
-          })}
+          })} */}
+          {/* {console.log(arr3)} */}
+          
         </Row>
       </Container>
     </>

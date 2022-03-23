@@ -8,7 +8,7 @@ function ConcertVideo({ video, title }) {
           title={title}
           className="embed-responsive-item"
           src={video}
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
     </>
