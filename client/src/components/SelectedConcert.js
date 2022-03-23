@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Row, Container, Col, Stack } from "react-bootstrap";
 import ConcertDetailList from "./selected_concert/ConcertDetailList";
 import ConcertImageList from "./selected_concert/ConcertImageList";
-// import ConcertVideoList from "./selected_concert/ConcertVideoList";
+import ConcertVideoList from "./selected_concert/ConcertVideoList";
 // import ConcertSummaryList from "./selected_concert/ConcertSummaryList";
 
 function SelectedConcert() {
@@ -58,24 +58,20 @@ function SelectedConcert() {
           <ConcertDetailList concert={concert} /> */}
         <Col className="border p-4 mt-5">
           <h2>IMAGES</h2>
+          <hr />
           <Row className="mx-auto text-center">
-            {/* <Stack direction="horizontal" gap={3}> */}
             <ConcertImageList images={images} />
-            {/* </Stack> */}
           </Row>
         </Col>
-
-        {/* {concert.map((c) => {
-            const allImages = c.images.map((image) => {
-              return (
-                <div key={image.title}>
-                  <Col>{image.image_url}</Col>
-                </div>
-              );
-            });
-          })} */}
-        {/* <ConcertVideoList videos={concert} />
-          <ConcertSummaryList summaries={concert} /> */}
+        <Col className="border p-4 mt-5">
+          <h2>VIDEOS</h2>
+          <hr />
+          <Row className="mx-auto text-center">
+          <ConcertVideoList videos={videos} />
+          </Row>
+        </Col>
+        
+        {/* <ConcertSummaryList summaries={concert} /> */}
       </Container>
     </>
   );
