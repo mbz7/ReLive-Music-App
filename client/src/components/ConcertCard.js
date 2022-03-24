@@ -1,22 +1,13 @@
 import React from "react";
-import { Col, Card, Row } from "react-bootstrap";
+import { Col, Card, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function ConcertCard({ user, band, venue, location, date, id }) {
-  // const [viewConcertId, setViewConcertId] = useState([]);
   return (
     <>
       <Col sm={12} md={12} lg={12} className="gap-3 mb-5 mt-5">
-        <Card
-        // as={Link}
-        // className="card-div mx-auto"
-        // onClick={(e) => setBrewery(id)}
-        // to={`/breweries/${id}`}
-        >
-          {/* <Card.Img className="h-100 card-img-filter" src={image} alt="" /> */}
-
+        <Card>
           <div className="p-4 mt-2 text-dark gap-3">
-            {/* <Card.ImgOverlay className="card-img-o"> */}
             <Row>
               <Col md={2} lg={2} className="m-0 p-0">
                 <div className="bg-light h-100 w-100 d-flex align-items-center p-4">
@@ -32,16 +23,16 @@ function ConcertCard({ user, band, venue, location, date, id }) {
                   <Card.Title className="update_title_color">
                     <h2 className="text-dark p-2">{band}</h2>
                   </Card.Title>
-                  {/* <Button
+                  <Button
                     variant="outline-dark"
                     className="mx-auto mt-2"
                     as={Link}
-                    onClick={(e) => setConcerts(id)}
                     to={`/concerts/${id}`}
                   >
                     View Concert Dashboard
-                  </Button> */}
-                  <Link to={`/concerts/${id}`}>Link To Concert</Link>
+                  </Button>
+                  {/* Alternative way just using a link */}
+                  {/* <Link to={`/concerts/${id}`}>Link To Concert</Link> */}
                 </Col>
                 <Col className="band_card_info-right">
                   <Card.Text className="">
@@ -59,14 +50,7 @@ function ConcertCard({ user, band, venue, location, date, id }) {
                 </Col>
               </Col>
             </Row>
-            {/* </Card.ImgOverlay> */}
           </div>
-
-          {/* <div className="card-footer-div text-center">
-              <div className="card-b-logo bg-white mx-auto">
-                <Image className="img-fluid" src={logo} alt="" />
-              </div>
-            </div> */}
         </Card>
       </Col>
     </>

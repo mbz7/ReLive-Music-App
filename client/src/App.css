@@ -15,6 +15,9 @@ nav {
   font-size: 18px;
   font-family: "Bebas Neue", cursive;
   letter-spacing: 0.08rem;
+  border-bottom: 2px solid rgb(228, 139, 31);
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+
 }
 
 p {
@@ -164,7 +167,7 @@ p {
   transition: all 1s;
   transform-origin: 0 0;
   /* background: linear-gradient(to bottom, #bc7012, #efd002 100%); */
-  background-image: url(./img/brewery_discovery_sign-in-banner.jpg);
+  background-image: url(./img/yvette-de-wit-NYrVisodQ2M-unsplash.jpeg);
   /* min-height: 100%; */
   background-repeat: no-repeat;
   background-size: cover;

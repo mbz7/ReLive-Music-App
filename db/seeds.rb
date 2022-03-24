@@ -7,25 +7,6 @@ Image.destroy_all
 Video.destroy_all
 ConcertSummary.destroy_all
 
-# create users
-puts 'Creating users...'
-u1 =
-  User.create!(
-    first_name: 'Myles',
-    last_name: 'Bracken',
-    email: 'myles@example.com',
-    username: 'test',
-    password_digest: 'test',
-  )
-  u2 =
-  User.create!(
-    first_name: 'Adam',
-    last_name: 'Bracken',
-    email: 'adam@example.com',
-    username: 'test2',
-    password_digest: 'test2',
-  )
-
 # create concerts
 puts 'Creating concerts...'
 c1 =

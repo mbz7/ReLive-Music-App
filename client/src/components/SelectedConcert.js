@@ -20,13 +20,7 @@ function SelectedConcert() {
   const text = concert.concert_summaries;
   const { id } = useParams();
   const concertId = concert.id;
-  // const [deleteText, setDeleteText] = useState([])
 
-
-  // setDeleteText(text)
-  // console.log(deleteText)
-
-  // const [newPostImage, setNewPostImage] = useState ({})
 
   useEffect(() => {
     fetch(`/concerts/${id}`)

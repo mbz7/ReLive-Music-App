@@ -14,7 +14,6 @@ import UserPage from "./components/UserPage";
 function App() {
   const [concerts, setConcerts] = useState([]);
   const [currentUser, setCurrentUser] = useState("");
-  // const [newPost, setNewPost] = useState({});
 
   //>> Logout
   function handleLogout(e) {
@@ -23,13 +22,7 @@ function App() {
     }).then(setCurrentUser());
   }
 
-  // function addPost(newPost) {
-  //   setNewPost([...concerts, newPost]);
-  //   location.reload();
-  // }
-
   // currentUser added to local storage to persist on refresh
-
   useEffect(() => {
     const data = localStorage.getItem("user-data");
     if (data) {
@@ -45,47 +38,53 @@ function App() {
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand as={Link} to="/home">
-            Navbar
+            reLive Music
           </Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="/home">
-              Home
-            </Nav.Link>
-            <Nav.Link as={Link} to="/dashboard">
-              Dashboard
-            </Nav.Link>
-            <Nav.Link as={Link} to="/account">
-              Account
-            </Nav.Link>
-            <Nav.Link className="mx-2" as={Link} to="/userpage">
-              Profile
-            </Nav.Link>
-            <div>
-              {/* Ternary used for distplaying Login/Logout button */}
-              {!currentUser ? (
-                <Button
-                  className="mx-2 nav-login-btn"
-                  as={Link}
-                  to="/"
-                  variant="outline-warning"
-                >
-                  Login
-                </Button>
-              ) : (
-                <Button
-                  onClick={handleLogout}
-                  className="mx-2 nav-login-btn"
-                  as={Link}
-                  to="/"
-                  variant="outline-warning"
-                >
-                  Log out
-                </Button>
-              )}
-            </div>
-          </Nav>
+          <div className="">
+            <Navbar.Toggle aria-controls="navbarScroll" />
+            <Navbar.Collapse id=" navbarScroll">
+              <Nav className="me-auto text-left">
+                {/* <Nav.Link as={Link} to="/home">
+                  Home
+                </Nav.Link> */}
+                <Nav.Link as={Link} to="/home">
+                  Dashboard
+                </Nav.Link>
+                <Nav.Link as={Link} to="/userpage">
+                  Account
+                </Nav.Link>
+                {/* <Nav.Link className="mx-2" as={Link} to="/userpage">
+                  Profile
+                </Nav.Link> */}
+                <div>
+                  {/* Ternary used for distplaying Login/Logout button */}
+                  {!currentUser ? (
+                    <Button
+                      className="mx-2 nav-login-btn"
+                      as={Link}
+                      to="/"
+                      variant="outline-warning"
+                    >
+                      Login
+                    </Button>
+                  ) : (
+                    <Button
+                      onClick={handleLogout}
+                      className="mx-2 nav-login-btn"
+                      as={Link}
+                      to="/"
+                      variant="outline-warning"
+                    >
+                      Log out
+                    </Button>
+                  )}
+                </div>
+              </Nav>
+            </Navbar.Collapse>
+          </div>
         </Container>
       </Navbar>
+
       <div>
         <Routes>
           <Route

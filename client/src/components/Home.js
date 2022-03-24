@@ -32,7 +32,7 @@ function Home({concerts, setConcerts, currentUser}) {
 
   return (
     <>
-      {/* {currentUser ? ( */}
+      {currentUser ? (
       <div>
         <Container fluid className="container-home-fluid bg-light">
           <div className="home-jumbotron d-flex flex-column justify-content-center">
@@ -75,9 +75,9 @@ function Home({concerts, setConcerts, currentUser}) {
           </div>
         </Container>
       </div>
-      {/* ) : (
+       ) : (
         <Navigate to="/" />
-      )} */}
+      )} 
     </>
   );
 }
