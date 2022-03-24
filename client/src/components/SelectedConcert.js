@@ -73,14 +73,16 @@ function SelectedConcert() {
 
         {/* Images Section */}
         <Col className="border border-warning p-4 mt-5 shadow-sm rounded">
-          <Row className=" d-flex justify-content-start">
+          <Col className="text-center">
             <h2>IMAGES</h2>
+          </Col>
+          <Row className=" d-flex justify-content-start">
             {/* Add An Image */}
             <Col className="border p-5 m-4 bg-light shadow-sm rounded">
               <AddImage onAddNewImage={addImage} />
             </Col>
           </Row>
-
+          {/* Image List */}
           <hr />
           <Row className="mx-auto p-4">
             <ConcertImageList images={images} />
@@ -89,14 +91,16 @@ function SelectedConcert() {
 
         {/* Videos Section  */}
         <Col className="border border-warning p-4 mt-5 shadow-sm rounded">
-          <Row className=" d-flex justify-content-start">
+          <Col className="text-center">
             <h2>VIDEOS</h2>
-           {/* Add A Video */}
-           <Col className="border p-5 m-4 bg-light shadow-sm rounded">
+          </Col>
+          {/* Add A Video */}
+          <Row className=" d-flex justify-content-start">
+            <Col className="border p-5 m-4 bg-light shadow-sm rounded">
               <AddVideo onAddNewVideo={addVideo} />
             </Col>
           </Row>
-
+          {/* Video List */}
           <hr />
           <Row className="mx-auto p-4">
             <ConcertVideoList videos={videos} />
@@ -105,7 +109,9 @@ function SelectedConcert() {
 
         {/* Concert Journal Section */}
         <Col className="border border-warning p-4 mt-5 shadow-sm rounded">
-          <h2>CONCERT JOURNAL</h2>
+          <Col className="text-center">
+            <h2>CONCERT JOURNAL</h2>
+          </Col>
           <hr />
           <Row className="mx-auto text-center">
             <ConcertSummaryList text={text} />
