@@ -1,13 +1,27 @@
 import React from "react";
 import { Form, Card, Button } from "react-bootstrap";
 
-function ConcertSummary({ text }) {
+function ConcertSummary({ id, text, onUpdateText, handleDeleteText }) {
+  // function handleDeleteText() {
+  //   console.log("test delete");
+  //   fetch(`/concert_summaries/${id}`, {
+  //     method: "DELETE",
+  //   })
+  //     .then((r) => r.json())
+  //     .then(() => {
+  //       handleDeleteText(text);
+  //     });
+  // }
   return (
     <>
       <Card body className="p-2 gap-3">
         <p>"{text}"</p>
-        <Button variant="outline-dark" className="m-3">Edit Text</Button>
-        <Button variant="danger" className="m-3">Delete Text</Button>
+        <Button variant="outline-dark" className="m-3">
+          Edit Text
+        </Button>
+        <Button onClick={handleDeleteText} className="btn-danger">
+          DELETE
+        </Button>
       </Card>
       {/* <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">

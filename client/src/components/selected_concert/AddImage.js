@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Form, Button, Row, Col, Stack } from "react-bootstrap";
 
-function AddImage({ onAddNewImage }) {
+function AddImage({ onAddNewImage, concertId }) {
   const [newImageUrl, setNewImageUrl] = useState("");
   const [imageTitle, setNewImageTitle] = useState("");
   //   const [newImagePost, setNewImagePost] = useState({});
@@ -11,7 +11,7 @@ function AddImage({ onAddNewImage }) {
     const data = {
       image_url: newImageUrl,
       title: imageTitle,
-      concert_id: "1",
+      concert_id: concertId,
     };
     fetch("/images", {
       method: "POST",

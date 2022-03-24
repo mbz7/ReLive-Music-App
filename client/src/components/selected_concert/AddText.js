@@ -22,6 +22,8 @@ function AddText({ onAddNewText }) {
     // setNewImagePost("")
   }
 
+  
+
   return (
     <>
       <Col className="mb-3">

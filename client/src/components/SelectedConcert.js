@@ -19,8 +19,12 @@ function SelectedConcert() {
   const videos = concert.videos;
   const text = concert.concert_summaries;
   const { id } = useParams();
+  const concertId = concert.id;
+  // const [deleteText, setDeleteText] = useState([])
 
-  console.log(id);
+
+  // setDeleteText(text)
+  // console.log(deleteText)
 
   // const [newPostImage, setNewPostImage] = useState ({})
 
@@ -56,6 +60,14 @@ function SelectedConcert() {
     });
   };
 
+  // function handleDeleteText(dText) {
+  //   const textList = setDeleteText(text);
+  //   const updatedText = textList.filter((t) => {
+  //     return t.id !== dText.id;
+  //   });
+  //   setDeleteText(updatedText)
+  // }
+
   // console.log(concert);
   // console.log(images);
   // console.log(videos);
@@ -82,7 +94,7 @@ function SelectedConcert() {
           <Row className=" d-flex justify-content-start">
             {/* Add An Image */}
             <Col className="border p-5 m-4 bg-light shadow-sm rounded">
-              <AddImage onAddNewImage={addImage} />
+              <AddImage onAddNewImage={addImage} concertId={concertId}/>
             </Col>
           </Row>
           {/* Image List */}
@@ -124,6 +136,7 @@ function SelectedConcert() {
           <hr />
           <Row className="mx-auto text-center">
             <ConcertSummaryList text={text} />
+            {/* handleDeleteText={handleDeleteText} */}
           </Row>
         </Col>
       </Container>

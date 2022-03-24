@@ -7,11 +7,10 @@ function ConcertSummaryList({ text }) {
     <>
       {text.map((t) => {
         return (
-          
-            <Col lg={10} className="gap-3 mt-3 mb-5 mx-auto">
-              <ConcertSummary key={t.id} text={t.text_summary} />
-            </Col>
-     
+          <Col lg={10} className="gap-3 mt-3 mb-5 mx-auto">
+            <ConcertSummary key={t.id} id={t.id} text={t.text_summary} />
+            {/* handleDeleteText={handleDeleteText} onUpdateText={onUpdateText}  */}
+          </Col>
         );
       })}
     </>
