@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import { Link, Navigate } from "react-router-dom";
 
-
 function Signup({ setCurrentUser, currentUser }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -28,16 +27,14 @@ function Signup({ setCurrentUser, currentUser }) {
       }),
     })
       .then((r) => r.json())
-      .then(r =>  
-      {
-        if (r.email){
-          setCurrentUser(r)
-        }else {
-           alert(r.errors)
-           setCurrentUser();
+      .then((r) => {
+        if (r.email) {
+          setCurrentUser(r);
+        } else {
+          alert(r.errors);
+          setCurrentUser();
         }
-      })
-     
+      });
   }
 
   return (
@@ -45,9 +42,9 @@ function Signup({ setCurrentUser, currentUser }) {
       {currentUser ? <Navigate to="/Home" /> : null}
       <Container>
         <div className="pt-5">
-          <Form className="outer inner">
+          <Form className="outer inner text-center">
             <br></br>
-            <h2>Register Account</h2>
+            <h2 className="mb-3">Register Account</h2>
             <Form.Group className="mb-3" controlId="formFirstName">
               <Form.Control
                 onChange={(e) => setFirstName(e.target.value)}
@@ -94,7 +91,7 @@ function Signup({ setCurrentUser, currentUser }) {
               />
             </Form.Group>
             <Form.Group
-              className="mb-3"
+              className="mb-1"
               controlId="formBasicPasswordConfirmation"
             >
               <Form.Control
@@ -109,11 +106,13 @@ function Signup({ setCurrentUser, currentUser }) {
             <Button onClick={handleSubmit} variant="primary">
               Create Account
             </Button>
+            <div className="already_have_account text-dark mt-4">
+              Already registered?{" "}
+              <Link className="text-dark" to="/">
+                Log In
+              </Link>
+            </div>
           </Form>
-          <br></br>
-          <div className="already_have_account text-white">
-            Already registered? <Link className="text-white" to="/">Log In</Link>
-          </div>
         </div>
       </Container>
     </div>

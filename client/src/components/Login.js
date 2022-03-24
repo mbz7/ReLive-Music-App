@@ -38,11 +38,11 @@ function Login({ setCurrentUser, currentUser }) {
       {currentUser ? <Navigate to="/Home" /> : null}
       <Container>
         <div className="pt-5">
-          <Form className="outer inner">
+          <Form className="outer inner text-center">
             <br></br>
-            <h2>Welcome Back!</h2>
+            <h2 className="mb-3">Welcome Back To ReLive!</h2>
             {/* user log in form */}
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3 mt-2" controlId="formBasicEmail">
               <Form.Control
                 onChange={(e) => setUsername(e.target.value)}
                 type="username"
@@ -60,12 +60,13 @@ function Login({ setCurrentUser, currentUser }) {
             <Button onClick={handleLogin} variant="primary" to="/login">
               Log In
             </Button>
-          </Form>
-          <br></br>
-          {/* link to sign up page */}
-          <div className="dont_have_account text-light">
-            Don't have an account? <Link to="/signup" className="text-white">Sign Up</Link>
+             {/* link to sign up page */}
+          <div className="dont_have_account text-dark mt-4">
+            Don't have an account? <Link to="/signup" className="text-dark">Sign Up</Link>
           </div>
+          </Form>
+      
+         
         </div>
       </Container>
     </div>
