@@ -7,7 +7,7 @@ function ConcertVideoList({ videos }) {
     <>
       {videos.map((video) => {
         return (
-          <Col>
+          <Col lg={4}>
             <ConcertVideo
               key={video.id}
               video={video.video_url}

@@ -7,14 +7,11 @@ function ConcertImageList({ images }) {
     <>
       {images.map((image) => {
         return (
-          
-              <Col>
-                <ConcertImage
-                  key={image.id}
-                  image={image.image_url}
-                  title={image.title}
-                />
-              </Col>
+          <ConcertImage
+            key={image.id}
+            image={image.image_url}
+            title={image.title}
+          />
         );
       })}
     </>

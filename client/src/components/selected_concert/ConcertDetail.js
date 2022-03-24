@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { Col, Card, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function ConcertDetail({ user, band, venue, location, date, id }) {
+function ConcertDetail({ concert }) {
   return (
-
     <>
       <Col sm={12} md={12} lg={12} className="gap-3 mb-5 mt-5">
         <Card
@@ -30,7 +29,7 @@ function ConcertDetail({ user, band, venue, location, date, id }) {
                   className="text-center band_card_border-right"
                 >
                   <Card.Title className="update_title_color">
-                    <h2 className="text-dark p-2">{band}</h2>
+                    <h2 className="text-dark p-2">{concert.band}</h2>
                   </Card.Title>
                   {/* <Button
                     variant="outline-dark"
@@ -41,34 +40,25 @@ function ConcertDetail({ user, band, venue, location, date, id }) {
                   >
                     View Concert Dashboard
                   </Button> */}
-                  <Link to={`/concerts/${id}`}>Link To Concert</Link>
-
-
+                  {/* <Link to={`/concerts/${id}`}>Link To Concert</Link> */}
                 </Col>
                 <Col className="band_card_info-right">
                   <Card.Text className="">
                     <strong>Venue: </strong>
-                    {venue}
+                    {concert.venue}
                   </Card.Text>
                   <Card.Text className="">
                     <strong>Location: </strong>
-                    {location}
+                    {concert.location}
                   </Card.Text>
                   <Card.Text className="">
                     <strong>Date: </strong>
-                    {date}
+                    {concert.date}
                   </Card.Text>
                 </Col>
               </Col>
             </Row>
-            {/* </Card.ImgOverlay> */}
           </div>
-          
-          {/* <div className="card-footer-div text-center">
-              <div className="card-b-logo bg-white mx-auto">
-                <Image className="img-fluid" src={logo} alt="" />
-              </div>
-            </div> */}
         </Card>
       </Col>
     </>

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   # log in
   # post '/login', to: 'sessions#create'
 
+  # post '/images', to: 'images#create'
+
   # log out
   # delete '/logout', to: 'sessions#destroy'
 

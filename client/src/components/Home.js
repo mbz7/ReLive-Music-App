@@ -13,7 +13,6 @@ function Home({concerts, setConcerts}) {
   // const [stateSearch, setStateSearch] = useState("");
 
   useEffect(() => {
-    
     fetch("/concerts")
       .then((r) => r.json())
       .then((data) => setNewPost(data));
