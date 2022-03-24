@@ -13,7 +13,7 @@ function AddVideo({ onAddNewVideo }) {
       title: videoTitle,
       concert_id: "1",
     };
-    fetch("/images", {
+    fetch("/videos", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

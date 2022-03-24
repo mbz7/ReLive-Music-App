@@ -7,6 +7,7 @@ import ConcertVideoList from "./selected_concert/ConcertVideoList";
 import ConcertSummaryList from "./selected_concert/ConcertSummaryList";
 import AddImage from "./selected_concert/AddImage";
 import AddVideo from "./selected_concert/AddVideo";
+import AddText from "./selected_concert/AddText"
 
 function SelectedConcert() {
   const [concert, setConcert] = useState({
@@ -31,12 +32,6 @@ function SelectedConcert() {
       });
   }, [id]);
 
-  // useEffect(() => {
-  //   fetch("/images")
-  //     .then((r) => r.json())
-  //     .then((data) => setNewPostImage(data));
-  // }, [newPostImage]);
-
   const addImage = (newImage) => {
     //fetch to add image to concert
     //inside callback once you have a new image from that post fetch:
@@ -49,7 +44,15 @@ function SelectedConcert() {
     //fetch to add image to concert
     //inside callback once you have a new image from that post fetch:
     setConcert((concert) => {
-      return { ...concert, images: [...concert.images, newVideo] };
+      return { ...concert, videos: [...concert.videos, newVideo] };
+    });
+  };
+
+  const addText = (newText) => {
+    //fetch to add image to concert
+    //inside callback once you have a new image from that post fetch:
+    setConcert((concert) => {
+      return { ...concert, text: [...concert.text, newText] };
     });
   };
 
@@ -112,6 +115,12 @@ function SelectedConcert() {
           <Col className="text-center">
             <h2>CONCERT JOURNAL</h2>
           </Col>
+          {/* Add Text */}
+          <Row className=" d-flex justify-content-start">
+            <Col className="border p-5 m-4 bg-light shadow-sm rounded">
+              <AddText onAddNewText={addText} />
+            </Col>
+          </Row>
           <hr />
           <Row className="mx-auto text-center">
             <ConcertSummaryList text={text} />

@@ -13,7 +13,7 @@ class ConcertSummariesController < ApplicationController
   end
 
   def create
-    summary = Video.create!(summary_params)
+    summary = ConcertSummary.create!(summary_params)
     render json: summary, status: :created
   end
 
