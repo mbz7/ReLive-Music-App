@@ -1,5 +1,5 @@
 import React from "react";
-import { Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import ConcertSummary from "./ConcertSummary";
 
 function ConcertSummaryList({ text }) {
@@ -7,9 +7,11 @@ function ConcertSummaryList({ text }) {
     <>
       {text.map((t) => {
         return (
-          <Col>
-            <ConcertSummary key={t.id} text={t.text_summary} />
-          </Col>
+          
+            <Col lg={10} className="gap-3 mt-3 mb-5 mx-auto">
+              <ConcertSummary key={t.id} text={t.text_summary} />
+            </Col>
+     
         );
       })}
     </>

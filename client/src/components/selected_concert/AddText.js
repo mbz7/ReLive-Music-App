@@ -18,7 +18,7 @@ function AddText({ onAddNewText }) {
       body: JSON.stringify(data),
     })
       .then((r) => r.json())
-      .then((newText) => console.log(newText));
+      .then((newText) => onAddNewText(newText));
     // setNewImagePost("")
   }
 

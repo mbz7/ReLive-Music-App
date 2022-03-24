@@ -52,7 +52,7 @@ function SelectedConcert() {
     //fetch to add image to concert
     //inside callback once you have a new image from that post fetch:
     setConcert((concert) => {
-      return { ...concert, text: [...concert.text, newText] };
+      return { ...concert, concert_summaries: [...concert.concert_summaries, newText] };
     });
   };
 
