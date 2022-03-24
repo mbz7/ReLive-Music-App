@@ -24,7 +24,7 @@ export default function NewPost({ setNewPost }) {
       }),
     })
       .then((r) => r.json())
-      .then((post) => setNewPost(post));
+      .then((newPost) => setNewPost(newPost));
     handleClose();
   }
 

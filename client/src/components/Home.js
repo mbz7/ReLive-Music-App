@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 // import Search from "../components/Search";
-// import { Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import ConcertCardList from "./ConcertCardList";
 import NewPost from "./NewPost";
 
-function Home({concerts, setConcerts}) {
+function Home({concerts, setConcerts, currentUser}) {
   
   const [newPost, setNewPost] = useState ({})
   // const [brewerySearch, setBrewerySearch] = useState("");
   // const [stateSearch, setStateSearch] = useState("");
 
-  useEffect(() => {
-    fetch("/concerts")
-      .then((r) => r.json())
-      .then((data) => setNewPost(data));
-  }, [newPost]);
+  // useEffect(() => {
+  //   fetch("/concerts")
+  //     .then((r) => r.json())
+  //     .then((data) => setNewPost(data));
+  // }, [newPost]);
 
   useEffect(() => {
     fetch("/concerts")
@@ -23,8 +23,12 @@ function Home({concerts, setConcerts}) {
       .then((concertList) => {
         setConcerts(concertList);
       });
-  }, [setConcerts]);
+  }, [newPost]);
  
+
+  // function addPost(newPost) {
+  //   setNewPost([...concerts, newPost])
+  // }
 
   return (
     <>

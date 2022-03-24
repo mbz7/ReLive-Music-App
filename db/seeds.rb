@@ -13,7 +13,6 @@ u1 =
   User.create!(
     first_name: 'Myles',
     last_name: 'Bracken',
-    profile_image_url: 'https://www.w3schools.com/howto/img_avatar.png',
     email: 'myles@example.com',
     username: 'test',
     password_digest: 'test',
@@ -22,7 +21,6 @@ u1 =
   User.create!(
     first_name: 'Adam',
     last_name: 'Bracken',
-    profile_image_url: 'https://www.w3schools.com/howto/img_avatar.png',
     email: 'adam@example.com',
     username: 'test2',
     password_digest: 'test2',
