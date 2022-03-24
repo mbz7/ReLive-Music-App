@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Card, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function ConcertCard({ user, band, venue, location, date, id }) {
+function ConcertCard({ band, venue, location, date, id }) {
   return (
     <>
       <Col sm={12} md={12} lg={12} className="gap-3 mb-5 mt-5">

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Modal } from "react-bootstrap";
 
-export default function NewPost({ setNewPost }) {
+export default function NewPost({ setNewPost, currentUser }) {
   const [show, setShow] = useState(false);
   const [band, setBand] = useState("");
   const [venue, setVenue] = useState("");
@@ -17,6 +17,7 @@ export default function NewPost({ setNewPost }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        user_id: currentUser.id,
         band: band,
         venue: venue,
         location: location,
