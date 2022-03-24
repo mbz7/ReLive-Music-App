@@ -11,7 +11,7 @@ ConcertSummary.destroy_all
 puts 'Creating concerts...'
 c1 =
   Concert.create!(
-    user_id: u1.id,
+    user_id: "1",
     band: 'Red Hot Chili Peppers',
     venue: 'Globe Life Field',
     location: 'Arlington, TX',
@@ -19,7 +19,7 @@ c1 =
   )
 c2 =
   Concert.create!(
-    user_id: u1.id,
+    user_id: "1",
     band: 'Red Hot Chili Peppers',
     venue: 'SoFi Stadium',
     location: 'Inglewood, CA',
@@ -27,7 +27,7 @@ c2 =
   )
 c3 =
   Concert.create!(
-    user_id: u1.id,
+    user_id: "1",
     band: 'Red Hot Chili Peppers',
     venue: 'Nationals Park',
     location: 'Washington, D.C.',

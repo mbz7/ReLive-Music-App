@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :authorized, only: %i[show create update]
+  # skip_before_action :authorized, only: %i[show create update]
   wrap_parameters format: []
   rescue_from ActiveRecord::RecordInvalid, with: :invalid_params
 
