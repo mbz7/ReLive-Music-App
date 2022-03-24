@@ -1,6 +1,6 @@
 import React from "react";
 import ConcertImage from "./ConcertImage";
-import { Container, Row, Col } from "react-bootstrap";
+// import { Container, Row, Col } from "react-bootstrap";
 
 function ConcertImageList({ images }) {
   return (

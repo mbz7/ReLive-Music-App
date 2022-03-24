@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Col, Card, Row, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Col, Card, Row} from "react-bootstrap";
+// import { Link } from "react-router-dom";
 
 function ConcertDetail({ concert }) {
   return (

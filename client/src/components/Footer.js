@@ -18,7 +18,7 @@ function Footer() {
           </svg>
         </a> */}
 
-            <ul className="nav col-md-4 justify-content-end">
+            {/* <ul className="nav col-md-4 justify-content-end">
               <li className="nav-item">
                 <a href="#" className="nav-link px-2 text-muted">
                   Home
@@ -44,7 +44,7 @@ function Footer() {
                   About
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </footer>
         </Container>
       </Container>

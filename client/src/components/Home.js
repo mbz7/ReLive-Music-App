@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-// import BreweryCardList from "../components/BreweryCardList";
-import { Row, Col, Container, Button } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 // import Search from "../components/Search";
-import { Navigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 import ConcertCardList from "./ConcertCardList";
 import NewPost from "./NewPost";
 
@@ -24,7 +23,7 @@ function Home({concerts, setConcerts}) {
       .then((concertList) => {
         setConcerts(concertList);
       });
-  }, []);
+  }, [setConcerts]);
  
 
   return (

@@ -1,8 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
+import { Routes, Link, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Dashboard from "./components/Dashboard";
 import Account from "./components/Account";

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Form, Button, Row, Col, Modal } from "react-bootstrap";
+import React, { useState } from "react";
+import { Form, Button, Modal } from "react-bootstrap";
 
 export default function NewPost({ setNewPost }) {
   const [show, setShow] = useState(false);
@@ -21,7 +21,7 @@ export default function NewPost({ setNewPost }) {
         venue: venue,
         location: location,
         date: date,
-      })
+      }),
     })
       .then((r) => r.json())
       .then((post) => setNewPost(post));

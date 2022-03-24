@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Card, Button } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
 function ConcertSummary({ id, text, onUpdateText, handleDeleteText }) {
   // function handleDeleteText() {
