@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Card, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function ConcertCard({ band, venue, location, date, id }) {
+function ConcertCard({ band, venue, location, date, id, handleDelete }) {
   return (
     <>
       <Col sm={12} md={12} lg={12} className="gap-3 mb-5 mt-5">
@@ -47,6 +47,10 @@ function ConcertCard({ band, venue, location, date, id }) {
                     <strong>Date: </strong>
                     {date}
                   </Card.Text>
+                  <Button
+                    onClick={() => handleDelete(id)}
+                    variant="outline-danger"
+                  >DELETE</Button>
                 </Col>
               </Col>
             </Row>

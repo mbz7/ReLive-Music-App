@@ -24,6 +24,23 @@ function Home({ concerts, setConcerts, currentUser }) {
       });
   }, [newPost]);
 
+  // function handleDelete(id) {
+  //   const newConcerts = concerts.filter(concert => concert.id !== id)
+  //   setConcerts(newConcerts)
+  // }
+
+  function handleDelete(id) {
+    fetch(`/concerts/${id}`, {
+      method: "DELETE",
+    }).then((r) => {
+      if (r.ok) {
+        setConcerts((concerts) =>
+          concerts.filter((concert) => concert.id !== id)
+        );
+      }
+    });
+  }
+
   // function addPost(newPost) {
   //   setNewPost([...concerts, newPost])
   // }
@@ -74,6 +91,7 @@ function Home({ concerts, setConcerts, currentUser }) {
                     <ConcertCardList
                       concerts={concerts}
                       setConcerts={setConcerts}
+                      handleDelete={handleDelete}
                     />
                   </Col>
                 </Row>
