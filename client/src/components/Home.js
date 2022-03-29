@@ -7,6 +7,7 @@ import NewPost from "./NewPost";
 
 function Home({ concerts, setConcerts, currentUser }) {
   const [newPost, setNewPost] = useState({});
+  const [newEditPost, setNewEditPost] = useState({});
   // const [brewerySearch, setBrewerySearch] = useState("");
   // const [stateSearch, setStateSearch] = useState("");
 
@@ -22,7 +23,7 @@ function Home({ concerts, setConcerts, currentUser }) {
       .then((concertList) => {
         setConcerts(concertList);
       });
-  }, [newPost]);
+  }, [newPost, newEditPost]);
 
   // function handleDelete(id) {
   //   const newConcerts = concerts.filter(concert => concert.id !== id)
@@ -40,6 +41,8 @@ function Home({ concerts, setConcerts, currentUser }) {
       }
     });
   }
+
+
 
   // function addPost(newPost) {
   //   setNewPost([...concerts, newPost])
@@ -92,6 +95,7 @@ function Home({ concerts, setConcerts, currentUser }) {
                       concerts={concerts}
                       setConcerts={setConcerts}
                       handleDelete={handleDelete}
+                      setNewEditPost={setNewEditPost}
                     />
                   </Col>
                 </Row>

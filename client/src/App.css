@@ -17,7 +17,6 @@ nav {
   letter-spacing: 0.08rem;
   border-bottom: 2px solid rgb(228, 139, 31);
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
-
 }
 
 p {
@@ -28,6 +27,11 @@ p {
 }
 
 /* Custom Styles */
+
+/* .image-div {
+  max-width: 100px;
+  height: 100px;
+} */
 
 /* ________________________________________________________________ */
 
@@ -92,8 +96,6 @@ p {
 .nav-login-btn {
   width: 90px;
 }
-
-
 
 /* Home Page Brewery Card Styling */
 

@@ -1,8 +1,18 @@
 import React from "react";
 import { Col, Card, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+// import ConcertEditModal from "./ConcertEditModal";
 
-function ConcertCard({ band, venue, location, date, id, handleDelete }) {
+function ConcertCard({
+  band,
+  venue,
+  location,
+  date,
+  id,
+  handleDelete,
+  currentUser,
+  setNewEditPost,
+}) {
   return (
     <>
       <Col sm={12} md={12} lg={12} className="gap-3 mb-5 mt-5">
@@ -50,7 +60,15 @@ function ConcertCard({ band, venue, location, date, id, handleDelete }) {
                   <Button
                     onClick={() => handleDelete(id)}
                     variant="outline-danger"
-                  >DELETE</Button>
+                  >
+                    DELETE
+                  </Button>
+
+                  {/* <ConcertEditModal
+                    setNewEditPost={setNewEditPost}
+                    id={id}
+                    currentUser={currentUser}
+                  /> */}
                 </Col>
               </Col>
             </Row>
