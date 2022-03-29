@@ -9,7 +9,7 @@ import AddImage from "./selected_concert/AddImage";
 import AddVideo from "./selected_concert/AddVideo";
 import AddText from "./selected_concert/AddText";
 
-function SelectedConcert() {
+function SelectedConcert({currentUser}) {
   const [concert, setConcert] = useState({
     images: [],
     videos: [],
@@ -134,7 +134,7 @@ function SelectedConcert() {
             </Row>
             <hr />
             <Row className="mx-auto text-center">
-              <ConcertSummaryList text={text} />
+              <ConcertSummaryList text={text} currentUser={currentUser} />
               {/* handleDeleteText={handleDeleteText} */}
             </Row>
           </Col>

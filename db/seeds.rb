@@ -1,7 +1,6 @@
 puts '🌱 Seeding data...'
 
 puts '🗑 Destroying old data...'
-User.destroy_all
 Concert.destroy_all
 Image.destroy_all
 Video.destroy_all

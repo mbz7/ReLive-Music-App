@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 
-function ConcertSummary({ id, text, onUpdateText, handleDeleteText }) {
+function ConcertSummary({ id, text, onUpdateText, handleDeleteText, currentUser }) {
   // function handleDeleteText() {
   //   console.log("test delete");
   //   fetch(`/concert_summaries/${id}`, {
@@ -16,12 +16,13 @@ function ConcertSummary({ id, text, onUpdateText, handleDeleteText }) {
     <>
       <Card body className="p-2 gap-3">
         <p>"{text}"</p>
-        <Button variant="outline-dark" className="m-3">
+        <p>- {currentUser.username}</p>
+        {/* <Button variant="outline-dark" className="m-3">
           Edit Text
         </Button>
         <Button onClick={handleDeleteText} className="btn-danger">
           DELETE
-        </Button>
+        </Button> */}
       </Card>
       {/* <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
