@@ -5,11 +5,15 @@ function AddVideo({ onAddNewVideo }) {
   const [videoUrl, setVideoUrl] = useState("");
   const [videoTitle, setVideoTitle] = useState("");
   //   const [newImagePost, setNewImagePost] = useState({});
+  // const youtubeURL = "www.youtube.com/embed/";
+  const youtubeURL = "https://www.youtube.com/embed/";
+  const newURL = `${youtubeURL}${videoUrl}`
 
   function handleVideoSubmit(e) {
     e.preventDefault();
+
     const data = {
-      video_url: videoUrl,
+      video_url: newURL,
       title: videoTitle,
       concert_id: "1",
     };
@@ -33,12 +37,12 @@ function AddVideo({ onAddNewVideo }) {
       <hr />
       <Stack direction="horizontal" gap={3}>
         <Col>
-          <Form.Label htmlFor="inputPassword5">VIDEO URL</Form.Label>
+          <Form.Label htmlFor="inputPassword5">Youtube Video URL</Form.Label>
           <Form.Control
             onChange={(e) => setVideoUrl(e.target.value)}
             size="sm"
             type="text"
-            placeholder="Add Image URL Here..."
+            placeholder="fkEtGx8M2Sk"
             className="p-2 mb-3"
           />
         </Col>
