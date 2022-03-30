@@ -15,22 +15,18 @@ function ConcertCard({
 }) {
   return (
     <>
-      <Col
-        sm={12}
-        md={12}
-        lg={12}
-        className="gap-3 mb-5 mt-5  "
-      >
+      <Col sm={12} md={12} lg={12} className="gap-3 mb-5 mt-5  ">
         <Card className="concert-card-div">
           <div className="p-4 mt-2 text-light gap-3">
-            <Row>
-              <Col md={2} lg={2} className="m-0 p-0">
+            <Row className="rowstyle">
+              <Col sm={12} md={2} lg={2} className="m-0 p-0">
                 <div className="h-100 w-100 d-flex align-items-center p-4">
                   <h5 className="mx-auto">band logo</h5>
                 </div>
               </Col>
               <Col className="d-flex justify-content-center align-items-center mt-3 p-2">
                 <Col
+                  sm={12}
                   md={6}
                   lg={6}
                   className="text-center band_card_border-right"
@@ -62,18 +58,21 @@ function ConcertCard({
                     <strong>Date: </strong>
                     {date}
                   </Card.Text>
-                  <Button
-                    onClick={() => handleDelete(id)}
-                    variant="outline-danger"
-                  >
-                    DELETE
-                  </Button>
 
                   {/* <ConcertEditModal
                     setNewEditPost={setNewEditPost}
                     id={id}
                     currentUser={currentUser}
                   /> */}
+                </Col>
+                <Col  className="text-end p-3">
+                  {" "}
+                  <Button
+                    onClick={() => handleDelete(id)}
+                    variant="outline-danger"
+                  >
+                    DELETE
+                  </Button>
                 </Col>
               </Col>
             </Row>

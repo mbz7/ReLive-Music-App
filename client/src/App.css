@@ -1,5 +1,7 @@
 /* Global Styles */
 
+
+
 h1,
 h2,
 h3,
@@ -19,7 +21,7 @@ nav {
   font-size: 18px;
   font-family: "Bebas Neue", cursive;
   letter-spacing: 0.08rem;
-  border-bottom: 2px solid #60DEFE;
+  border-bottom: 2px solid #60defe;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
   background-color: #192430;
 }
@@ -49,7 +51,7 @@ p {
 }
 
 .home-jumbotron {
-  height:900px;
+  height: 900px;
   background-color: rgb(231, 231, 231);
   margin: 0;
   padding: 0;
@@ -57,7 +59,7 @@ p {
     url("./img/yvette-de-wit-NYrVisodQ2M-unsplash_edit-2.jpg");
   /* background-image: url("./img/yvette-de-wit-NYrVisodQ2M-unsplash_edit-2-2.jpg"); */
   background-size: cover;
-  background-position: 0 90%;
+  background-position: bottom;
   /* background-repeat: no-repeat; */
   /* background-attachment: auto; */
 }
@@ -85,9 +87,6 @@ p {
   z-index: 2;
 }
 
-
-
-
 /* .home-2-jumbo-gradient{
     height: 50px;
     background: #141011;
@@ -97,14 +96,38 @@ p {
 } */
 
 .concert-list-container {
-  background-color: #192430;
+  /* background-color: #192430; */
   /* padding-top: 50px; */
+  margin-top: -175px;
+}
+
+.search-bar-container {
+  padding: 10px;
+  /* border-right: 1px solid #ccc */
+  /* background-color: #1b2e3c; */
 }
 
 .search-bar {
-  min-width: 450px;
-  max-width: 600px;
-  margin-top: -20px;
+  /* min-width: 200px;
+  max-width: 800px; */
+  padding: 20px 0;
+
+  /* margin-top: -20px; */
+}
+
+.search-bar input {
+  /* width: 35rem; */
+  height: 60px;
+  border-radius: 20px;
+  border: 2px #60defe solid;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  font-size: 20px;
+  padding: 20px;
+  background-color: #192430 !important;
+}
+
+input {
+  color: #ffffff
 }
 
 .nav-login-btn {
@@ -170,10 +193,10 @@ p {
 }
 
 .card-div {
-  height: auto;
-  max-width: 555px !important;
+  /* height: auto; */
+  /* max-width: 555px !important; */
   overflow: hidden !important;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .card-img-filter {
@@ -206,6 +229,8 @@ p {
 .band_card_info-right {
   padding-left: 50px;
 }
+
+
 
 /* Card Footer */
 
@@ -340,11 +365,9 @@ p {
   font-size: 25px !important;
 }
 
-/* styles google map */
-.google_styling {
-  height: 50vh;
-  margin: 10px 50px;
-  filter: drop-shadow(-10px 10px 3px #ccc);
-  margin-top: 15px;
-  text-align: center;
-}
+
+/* @media (max-width: 768px){
+  .rowstyle {
+      display: flex;
+      flex-direction: column !important;
+  } */
