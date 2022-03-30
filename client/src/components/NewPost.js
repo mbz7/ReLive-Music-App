@@ -3,6 +3,7 @@ import { Form, Button, Modal } from "react-bootstrap";
 
 export default function NewPost({ setNewPost, currentUser }) {
   const [show, setShow] = useState(false);
+  const [logo, setLogo] = useState("");
   const [band, setBand] = useState("");
   const [venue, setVenue] = useState("");
   const [location, setLocation] = useState("");
@@ -18,6 +19,7 @@ export default function NewPost({ setNewPost, currentUser }) {
       },
       body: JSON.stringify({
         user_id: currentUser.id,
+        band_logo: logo,
         band: band,
         venue: venue,
         location: location,
@@ -77,6 +79,14 @@ export default function NewPost({ setNewPost, currentUser }) {
         </Modal.Header>
         <Modal.Body>
           <Modal.Body>
+          <Form.Label htmlFor="inputPassword5">BAND LOGO</Form.Label>
+            <Form.Control
+              onChange={(e) => setLogo(e.target.value)}
+              size="sm"
+              type="text"
+              placeholder="Band Logo Url..."
+              className="p-2 mb-3"
+            />
             <Form.Label htmlFor="inputPassword5">BAND NAMES</Form.Label>
             <Form.Control
               onChange={(e) => setBand(e.target.value)}

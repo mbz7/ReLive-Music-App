@@ -21,9 +21,9 @@ function ConcertCard({
           <div className="p-4 mt-2 text-light gap-3">
             <Row className="rowstyle">
               <Col sm={12} md={2} lg={2} className="m-0 p-0">
-                <div className="h-100 w-100 d-flex align-items-center p-4">
-                  <Image src={logo} thumbnail />
-                </div>
+                {/* <div className="h-100 w-autp d-flex align-items-center p-4"> */}
+                  <Image className="img-fluid d-flex align-items-center p-4" src={logo} alt="" />
+                {/* </div> */}
               </Col>
               <Col className="d-flex justify-content-center align-items-center mt-3 p-2">
                 <Col
