@@ -21,7 +21,7 @@ export default function ConcertEditModal({ editPost, id }) {
       },
       body: JSON.stringify({
         // user_id: currentUser.id,
-        logo: logo,
+        band_logo: logo,
         band: band,
         venue: venue,
         location: location,
