@@ -1,7 +1,5 @@
 /* Global Styles */
 
-
-
 h1,
 h2,
 h3,
@@ -13,17 +11,13 @@ h6,
   letter-spacing: 0.05rem;
 }
 
-/* .container .container.fluid {
-  background-color: #141011;
-} */
-
 nav {
   font-size: 18px;
   font-family: "Bebas Neue", cursive;
   letter-spacing: 0.08rem;
   border-bottom: 2px solid #60defe;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
-  background-color: #192430;
+  background-color: #192430 !important;
 }
 
 p {
@@ -87,10 +81,10 @@ p {
   z-index: 2;
 }
 
-.thumbnail{
-  border:none !important;
+.thumbnail {
+  border: none !important;
   background: transparent !important;
-  box-shadow:none !important;
+  box-shadow: none !important;
 }
 
 /* .home-2-jumbo-gradient{
@@ -133,7 +127,7 @@ p {
 }
 
 input {
-  color: #ffffff
+  color: #ffffff;
 }
 
 .nav-login-btn {
@@ -236,26 +230,6 @@ input {
   padding-left: 50px;
 }
 
-
-
-/* Card Footer */
-
-.card-footer-div {
-  height: 100%;
-  border-top: solid 1px rgb(223, 223, 223);
-}
-
-.card-b-logo {
-  height: 100%;
-  width: auto;
-}
-
-.card-b-logo img {
-  height: 80px;
-  width: auto;
-  padding: 10px;
-}
-
 /* ________________________________________________________________ */
 
 /* login / signup styling */
@@ -265,7 +239,7 @@ input {
   transition: all 1s;
   transform-origin: 0 0;
   /* background: linear-gradient(to bottom, #bc7012, #efd002 100%); */
-  background-image: url(./img/yvette-de-wit-NYrVisodQ2M-unsplash.jpeg);
+  background-image: url(./img/yvette-de-wit-NYrVisodQ2M-unsplash_edit-2-2.jpg);
   /* min-height: 100%; */
   background-repeat: no-repeat;
   background-size: cover;
@@ -326,7 +300,7 @@ input {
 
 /* Beer Card */
 
-.beer-title {
+/* .beer-title {
   font-size: 14px;
   font-weight: 500;
   font-family: "Bebas Neue", cursive;
@@ -341,14 +315,14 @@ input {
 .beer-card-logo-div img {
   max-height: 100px !important;
   width: auto;
-}
+} */
 
 /* User Page */
 
 .profile-main-div {
   position: relative;
   top: 40px;
-  background-color: rgb(240, 240, 240);
+  background-color: rgba(240, 240, 240, 0.831);
 }
 
 .account-profile-div {
@@ -370,7 +344,6 @@ input {
   height: 50px;
   font-size: 25px !important;
 }
-
 
 /* @media (max-width: 768px){
   .rowstyle {

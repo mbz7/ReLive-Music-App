@@ -9,6 +9,7 @@ function Home({currentUser }) {
   const [search, setSearch] = useState("");
   const [concerts, setConcerts] = useState([]);
 
+  // function that takes edit post and bring its up to home, checks to see if concert.id matches the post.id passed up, if it doesn't match returns the regular concert.
   const editPost = (post) => {
     setConcerts(concerts => {
       return concerts.map(c => {
@@ -74,6 +75,8 @@ function Home({currentUser }) {
       }
     });
   }
+
+  
 
   // function addPost(newPost) {
   //   setNewPost([...concerts, newPost])

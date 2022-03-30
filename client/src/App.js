@@ -34,7 +34,9 @@ function App() {
   });
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      {/* <Navbar bg="dark" variant="dark"> */}
+      <Navbar variant="dark">
+
         <Container>
           <Navbar.Brand as={Link} to="/home">
             reLive Music

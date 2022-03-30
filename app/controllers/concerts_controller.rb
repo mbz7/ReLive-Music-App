@@ -4,7 +4,9 @@ class ConcertsController < ApplicationController
               with: :render_unprocessable_entity_response
 
   def index
+    # when all concerts are returned order by created_at timestamp
     render json: Concert.all.order('created_at')
+    # render json: Concert.all
   end
 
   def show
@@ -13,8 +15,9 @@ class ConcertsController < ApplicationController
   end
 
   def create
-    user = User.find(session[:user_id])
-    concert = user.concerts.create!(concert_params)
+    # when user is created, finds the user id and adds it
+    # user = User.find(session[:user_id])
+    concert = Concert.create!(concert_params)
     render json: concert, status: :created
   end
 
