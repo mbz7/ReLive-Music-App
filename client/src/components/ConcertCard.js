@@ -24,13 +24,14 @@ function ConcertCard({
                 sm={12}
                 md={2}
                 lg={2}
-                className="d-flex align-items-center justify-content-center p-4"
+                className="d-flex align-items-center justify-content-center p-3"
               >
-                <div className="band-logo-container ">
+                <div className="band-logo-container">
                   <Image
-                    className="band-logo img-fluid p-1"
+                    className="band-logo p-2"
                     src={logo}
                     alt="band_logo"
+                    
                   />
                 </div>
               </Col>
@@ -42,10 +43,10 @@ function ConcertCard({
                   className="text-center band_card_border-right"
                 >
                   <Card.Title className="update_title_color">
-                    <h2 className="text-light p-2">{band}</h2>
+                    <h1 className=" p-2 h1-card-grad">{band}</h1>
                   </Card.Title>
                   <Button
-                    variant="info"
+                    variant="outline-light"
                     className="mx-auto mt-2 btn-md mb-1 btn-lg"
                     as={Link}
                     to={`/concerts/${id}`}

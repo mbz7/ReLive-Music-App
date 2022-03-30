@@ -41,7 +41,7 @@ p {
 .container-home-fluid {
   margin: 0 !important;
   padding: 0 !important;
-  background-color: #192430 !important;
+  background-color: #091117 !important;
 }
 
 .home-jumbotron {
@@ -49,7 +49,7 @@ p {
   background-color: rgb(231, 231, 231);
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.221), #192430),
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.221), #091117),
     url("./img/yvette-de-wit-NYrVisodQ2M-unsplash_edit-2.jpg");
   /* background-image: url("./img/yvette-de-wit-NYrVisodQ2M-unsplash_edit-2-2.jpg"); */
   background-size: cover;
@@ -131,11 +131,17 @@ input {
   margin-top: -175px;
 }
 
+.band-logo-container {
+  background-color: #192430;
+  background-blend-mode: multiply;
+}
+
 .band-logo {
   max-width: 130px;
   height: auto;
   margin-left: 20px;
-  /* background-color: transparent; */
+  background-color: #192430;
+  
 }
 
 .nav-login-btn {
@@ -150,6 +156,13 @@ input {
   -webkit-background-clip: text;
   background-clip: text;
   font-size: 72px;
+}
+.h1-card-grad {
+  background: linear-gradient(200deg, #1a2980 0%, #26d0ce 50%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 52px;
 }
 
 .hr-grad {
@@ -203,11 +216,15 @@ input {
 
 .card {
   border-radius: 10px !important;
-  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 78%, 0.913);
 }
 
 .concert-card-div {
-  background-color: #091117;
+  background-color: #192430;
+  border: 2px #475668 solid;
+  box-shadow: 0 2px 6px 0 #60e9d93f;
+
+
 }
 
 .concert-card-div p {
