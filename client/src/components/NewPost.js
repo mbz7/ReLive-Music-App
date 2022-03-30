@@ -57,13 +57,13 @@ export default function NewPost({ setNewPost, currentUser }) {
   return (
     <div>
       <Button
-        variant="info"
+        // variant="info"
         size="lg"
-        className="mt-3 new-post-btn"
+        className="mt-3 new-post-btn btn-grad"
         onClick={handleShow}
       >
         {" "}
-        Create New Post{" "}
+        Add A New Concert{" "}
       </Button>
       <Modal
         size="lg"

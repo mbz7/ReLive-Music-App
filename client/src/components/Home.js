@@ -52,24 +52,25 @@ function Home({ concerts, setConcerts, currentUser }) {
     <>
       {currentUser ? (
         <div>
-          <Container fluid className="container-home-fluid bg-light">
+          <Container fluid className="container-home-fluid">
             <div className="home-jumbotron d-flex flex-column justify-content-center">
               <div className="overlay"></div>
               <div className="jumbotron-inner text-center">
                 <Col
                   lg={7}
-                  className="mx-auto bg-light rounded-lg home_jumbotron_welcome-div"
+                  className="mx-auto rounded-lg home_jumbotron_welcome-div"
                 >
-                  <div className="text-dark">
-                    {/* <h2 className="p-2 text-center">
+                  <div className="text-light welcome-top-div">
+                    <h2 className="p-2 text-center">
                     {currentUser ? `Hello, ${currentUser.first_name}!` : ""}
-                  </h2> */}
+                  </h2>
                     <Col className="text-center">
-                      <h1>Welcome To ReLive</h1>
-                      <p className="p-2 text-lg">
+                      <h1 className="h1-grad">Welcome To ReLive</h1>
+                      <p className="p-2 text-lg mx-auto">
                         A home for all of your concert experiences
                       </p>
                     </Col>
+                    <hr className="mx-auto hr-grad" />
                     <Col className="text-center">
                       <NewPost
                         setNewPost={setNewPost}
@@ -83,10 +84,10 @@ function Home({ concerts, setConcerts, currentUser }) {
             {/* <div className="home-2-jumbo-gradient"><span></span></div> */}
             <div className="concert-list-container">
               <Container>
-                <div className="text-center">
+                <div className="text-center text-light">
                   <h3>Concert List</h3>
                   <p>View Past Concerts or Add A New One Below</p>
-                  <hr className="w-100 mx-auto mt-5" />
+                  <hr className="w-100 mx-auto mt-5 hr-grad-2" />
                 </div>
 
                 <Row>

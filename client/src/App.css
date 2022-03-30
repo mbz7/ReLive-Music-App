@@ -11,12 +11,17 @@ h6,
   letter-spacing: 0.05rem;
 }
 
+/* .container .container.fluid {
+  background-color: #141011;
+} */
+
 nav {
   font-size: 18px;
   font-family: "Bebas Neue", cursive;
   letter-spacing: 0.08rem;
-  border-bottom: 2px solid rgb(228, 139, 31);
+  border-bottom: 2px solid #60DEFE;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  background-color: #192430;
 }
 
 p {
@@ -40,24 +45,30 @@ p {
 .container-home-fluid {
   margin: 0 !important;
   padding: 0 !important;
+  background-color: #192430 !important;
 }
 
 .home-jumbotron {
-  height: 350px;
+  height:900px;
   background-color: rgb(231, 231, 231);
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("./img/yvette-de-wit-NYrVisodQ2M-unsplash.jpeg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.221), #192430),
+    url("./img/yvette-de-wit-NYrVisodQ2M-unsplash_edit-2.jpg");
+  /* background-image: url("./img/yvette-de-wit-NYrVisodQ2M-unsplash_edit-2-2.jpg"); */
   background-size: cover;
-  background-position: 50% 75%;
+  background-position: 0 90%;
+  /* background-repeat: no-repeat; */
+  /* background-attachment: auto; */
 }
 
 .home_jumbotron_welcome-div {
   border-radius: 10px !important;
-  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
-  margin-top: 350px;
-  padding: 75px;
+  /* box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2); */
+  /* margin-top: 350px; */
+  padding: 100px;
+  /* background-color: #0911172a; */
+  margin-top: 100px;
 }
 
 .home-jumbotorn > .overlay {
@@ -74,6 +85,9 @@ p {
   z-index: 2;
 }
 
+
+
+
 /* .home-2-jumbo-gradient{
     height: 50px;
     background: #141011;
@@ -83,8 +97,8 @@ p {
 } */
 
 .concert-list-container {
-  background-color: rgb(241, 241, 241);
-  padding-top: 200px;
+  background-color: #192430;
+  /* padding-top: 50px; */
 }
 
 .search-bar {
@@ -97,11 +111,62 @@ p {
   width: 90px;
 }
 
+/* custom button gradient for create new posts */
+
+.h1-grad {
+  background: linear-gradient(200deg, #1a2980 0%, #26d0ce 50%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 72px;
+}
+
+.hr-grad {
+  background: linear-gradient(to right, #1a2980 0%, #26d0ce 25%, #e62020 50%);
+  height: 10px;
+}
+
+.hr-grad-2 {
+  background: linear-gradient(to left, #1a2980 0%, #26d0ce 50%);
+  height: 10px;
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #1a2980 0%,
+    #26d0ce 51%,
+    #1a2980 100%
+  );
+}
+.btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px rgb(48, 48, 48);
+  border-radius: 10px;
+  /* display: block; */
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
 /* Home Page Brewery Card Styling */
 
 .card {
   border-radius: 10px !important;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.concert-card-div {
+  background-color: #091117;
 }
 
 .card-div {
