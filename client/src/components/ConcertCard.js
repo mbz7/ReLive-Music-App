@@ -18,12 +18,21 @@ function ConcertCard({
     <>
       <Col sm={12} md={12} lg={12} className="gap-3 mb-5 mt-5  ">
         <Card className="concert-card-div">
-          <div className="p-4 mt-2 text-light gap-3">
+          <div className="p-4 mt-2 text-dark gap-3">
             <Row className="rowstyle">
-              <Col sm={12} md={2} lg={2} className="m-0 p-0">
-                {/* <div className="h-100 w-autp d-flex align-items-center p-4"> */}
-                  <Image className="img-fluid d-flex align-items-center p-4" src={logo} alt="" />
-                {/* </div> */}
+              <Col
+                sm={12}
+                md={2}
+                lg={2}
+                className="d-flex align-items-center justify-content-center p-4"
+              >
+                <div className="band-logo-container ">
+                  <Image
+                    className="band-logo img-fluid p-1"
+                    src={logo}
+                    alt="band_logo"
+                  />
+                </div>
               </Col>
               <Col className="d-flex justify-content-center align-items-center mt-3 p-2">
                 <Col
@@ -36,19 +45,29 @@ function ConcertCard({
                     <h2 className="text-light p-2">{band}</h2>
                   </Card.Title>
                   <Button
-                    variant="outline-light"
-                    className="mx-auto mt-2"
+                    variant="info"
+                    className="mx-auto mt-2 btn-md mb-1 btn-lg"
                     as={Link}
                     to={`/concerts/${id}`}
                   >
-                    View Concert Dashboard
+                    <div>
+                      <span className="view-btn">View Concert Dashboard</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        className="bi bi-arrow-right-circle"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                        />
+                      </svg>{" "}
+                    </div>
                   </Button>
 
-                  <ConcertEditModal
-                    editPost={editPost}
-                    id={id}
-                    // currentUser={currentUser}
-                  />
                   {/* Alternative way just using a link */}
                   {/* <Link to={`/concerts/${id}`}>Link To Concert</Link> */}
                 </Col>
@@ -65,20 +84,30 @@ function ConcertCard({
                     <strong>Date: </strong>
                     {date}
                   </Card.Text>
-
                 </Col>
-                <Col  className="text-end p-3">
-                  {" "}
-                  <Button
-                    onClick={() => handleDelete(id)}
-                    variant="outline-danger"
-                  >
-                    DELETE
-                  </Button>
+
+                <Col className="text-end p-3">
+                  <Col className="text-center">
+                    <ConcertEditModal
+                      editPost={editPost}
+                      id={id}
+                      // currentUser={currentUser}
+                    />{" "}
+                    <Button
+                      onClick={() => handleDelete(id)}
+                      variant="outline-danger"
+                      size="sm"
+                      className="w-75"
+                    >
+                      Delete
+                    </Button>
+                  </Col>
                 </Col>
               </Col>
             </Row>
           </div>
+          <hr className="hr-grad-2" />
+          {/* <Card.Footer className="text-muted"></Card.Footer> */}
         </Card>
       </Col>
     </>

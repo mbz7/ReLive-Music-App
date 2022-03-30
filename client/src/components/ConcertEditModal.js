@@ -68,9 +68,9 @@ export default function ConcertEditModal({ editPost, id }) {
   return (
     <div>
       <Button
-        variant="outline-info"
+        variant="outline-light"
         size="sm"
-        className="mt-3 new-post-btn"
+        className="new-post-btn mt-3 mb-3 w-75"
         onClick={handleShow}
       >
         {" "}
@@ -139,8 +139,9 @@ export default function ConcertEditModal({ editPost, id }) {
         </Modal.Body>
         <Modal.Footer className="bg-light btn-large">
           <Button
-            className=" mx-auto btn-lg"
+            className="mx-auto"
             variant="primary"
+            size="lg"
             onClick={handleSubmit}
           >
             Submit
