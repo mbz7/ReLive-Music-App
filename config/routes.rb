@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :concert_summaries, only: %i[index show create destroy]
   resources :images, only: %i[index show create destroy]
   resources :videos, only: %i[index show create destroy]
-  resources :concerts, only: %i[index show create destroy]
+  resources :concerts, only: %i[index show create update destroy]
 
   # log in
   post '/login', to: 'sessions#create'

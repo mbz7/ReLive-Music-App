@@ -1,23 +1,27 @@
 import React, { useState } from "react";
 import { Form, Button, Modal } from "react-bootstrap";
 
-export default function ConcertEditModal ({ setNewEditPost, currentUser, id }) {
+export default function ConcertEditModal({ editPost, id }) {
   const [show, setShow] = useState(false);
+  const [logo, setLogo] = useState("");
   const [band, setBand] = useState("");
   const [venue, setVenue] = useState("");
   const [location, setLocation] = useState("");
   const [date, setDate] = useState("");
+  const [errors, setErrors] = useState([])
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   function handleSubmit(e) {
+    e.preventDefault();
     fetch(`/concerts/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        user_id: currentUser.id,
+        // user_id: currentUser.id,
+        logo: logo,
         band: band,
         venue: venue,
         location: location,
@@ -25,8 +29,15 @@ export default function ConcertEditModal ({ setNewEditPost, currentUser, id }) {
       }),
     })
       .then((r) => r.json())
-      .then((newEditPost) => setNewEditPost(newEditPost));
-    handleClose();
+      .then((newEditPost) => {
+        if (newEditPost.errors) {
+          setErrors(newEditPost.errors)
+        } else {
+          editPost(newEditPost)
+          handleClose();
+        }
+      });
+    
   }
 
   // function handleSubmit(e) {
@@ -57,13 +68,13 @@ export default function ConcertEditModal ({ setNewEditPost, currentUser, id }) {
   return (
     <div>
       <Button
-        variant="info"
-        size="lg"
+        variant="outline-info"
+        size="sm"
         className="mt-3 new-post-btn"
         onClick={handleShow}
       >
         {" "}
-        Create New Post{" "}
+        Edit Concert{" "}
       </Button>
       <Modal
         size="lg"
@@ -73,10 +84,25 @@ export default function ConcertEditModal ({ setNewEditPost, currentUser, id }) {
         onHide={handleClose}
       >
         <Modal.Header className="bg-info" closeButton>
-          <Modal.Title>Post A New Concert</Modal.Title>
+          <Modal.Title>Edit Current Concert</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Modal.Body>
+            <div>
+            <ul>
+                {errors.map(e => {
+                return <li style={{color: "red"}}>{e}</li>
+              })}
+              </ul>
+              </div>
+            <Form.Label htmlFor="inputPassword5">BAND LOGO</Form.Label>
+            <Form.Control
+              onChange={(e) => setLogo(e.target.value)}
+              size="sm"
+              type="text"
+              placeholder="Band Logo Url..."
+              className="p-2 mb-3"
+            />
             <Form.Label htmlFor="inputPassword5">BAND NAMES</Form.Label>
             <Form.Control
               onChange={(e) => setBand(e.target.value)}

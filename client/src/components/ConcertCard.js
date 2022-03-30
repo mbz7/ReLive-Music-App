@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Card, Row, Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-// import ConcertEditModal from "./ConcertEditModal";
+import ConcertEditModal from "./ConcertEditModal";
 
 function ConcertCard({
   logo,
@@ -11,8 +11,8 @@ function ConcertCard({
   date,
   id,
   handleDelete,
-  currentUser,
-  setNewEditPost,
+  // currentUser,
+  editPost,
 }) {
   return (
     <>
@@ -43,6 +43,12 @@ function ConcertCard({
                   >
                     View Concert Dashboard
                   </Button>
+
+                  <ConcertEditModal
+                    editPost={editPost}
+                    id={id}
+                    // currentUser={currentUser}
+                  />
                   {/* Alternative way just using a link */}
                   {/* <Link to={`/concerts/${id}`}>Link To Concert</Link> */}
                 </Col>
@@ -60,11 +66,6 @@ function ConcertCard({
                     {date}
                   </Card.Text>
 
-                  {/* <ConcertEditModal
-                    setNewEditPost={setNewEditPost}
-                    id={id}
-                    currentUser={currentUser}
-                  /> */}
                 </Col>
                 <Col  className="text-end p-3">
                   {" "}

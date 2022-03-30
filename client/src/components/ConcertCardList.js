@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Container } from "react-bootstrap";
 import ConcertCard from "./ConcertCard";
 
-function ConcertCardList({ concerts, setConcerts, currentUser, handleDelete, setNewEditPost }) {
+function ConcertCardList({ concerts, setConcerts, handleDelete, editPost }) {
   return (
     <>
       <Container>
@@ -20,8 +20,8 @@ function ConcertCardList({ concerts, setConcerts, currentUser, handleDelete, set
                 date={concert.date}
                 setConcerts={setConcerts}
                 handleDelete={handleDelete}
-                setNewEditPost={setNewEditPost}
-                currentUser={currentUser}
+                editPost={editPost}
+                // currentUser={currentUser}
 
               />
             );

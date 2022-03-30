@@ -5,10 +5,28 @@ import { Navigate } from "react-router-dom";
 import ConcertCardList from "./ConcertCardList";
 import NewPost from "./NewPost";
 
-function Home({ concerts, setConcerts, currentUser }) {
-  const [newPost, setNewPost] = useState({});
-  const [newEditPost, setNewEditPost] = useState({});
+function Home({currentUser }) {
   const [search, setSearch] = useState("");
+  const [concerts, setConcerts] = useState([]);
+
+  const editPost = (post) => {
+    setConcerts(concerts => {
+      return concerts.map(c => {
+        if (c.id === post.id) {
+          return post
+        } else {
+          return c
+        }
+      })
+    })
+  }
+
+  const addPost = (post) => {
+    setConcerts(concerts => {
+      return [...concerts, post]
+    })
+  }
+
   // const [brewerySearch, setBrewerySearch] = useState("");
   // const [stateSearch, setStateSearch] = useState("");
 
@@ -24,7 +42,7 @@ function Home({ concerts, setConcerts, currentUser }) {
       .then((concertList) => {
         setConcerts(concertList);
       });
-  }, [newPost, newEditPost]);
+  }, []);
 
   // function handleDelete(id) {
   //   const newConcerts = concerts.filter(concert => concert.id !== id)
@@ -86,8 +104,8 @@ function Home({ concerts, setConcerts, currentUser }) {
                     <hr className="mx-auto hr-grad" />
                     <Col className="text-center">
                       <NewPost
-                        setNewPost={setNewPost}
-                        currentUser={currentUser}
+                        addPost={addPost}
+                        // currentUser={currentUser}
                       />
                     </Col>
                   </div>
@@ -137,7 +155,7 @@ function Home({ concerts, setConcerts, currentUser }) {
                       concerts={filteredPost()}
                       setConcerts={setConcerts}
                       handleDelete={handleDelete}
-                      setNewEditPost={setNewEditPost}
+                      editPost={editPost}
                     />
                   </Col>
                 </Row>

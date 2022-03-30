@@ -12,7 +12,6 @@ import Signup from "./components/Signup";
 import UserPage from "./components/UserPage";
 
 function App() {
-  const [concerts, setConcerts] = useState([]);
   const [currentUser, setCurrentUser] = useState("");
 
   //>> Logout
@@ -112,8 +111,6 @@ function App() {
             path="/home"
             element={
               <Home
-                concerts={concerts}
-                setConcerts={setConcerts}
                 currentUser={currentUser}
               />
             }

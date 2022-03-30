@@ -4,7 +4,7 @@ class ConcertsController < ApplicationController
               with: :render_unprocessable_entity_response
 
   def index
-    render json: Concert.all
+    render json: Concert.all.order('created_at')
   end
 
   def show
@@ -13,8 +13,15 @@ class ConcertsController < ApplicationController
   end
 
   def create
-    concert = Concert.create!(concert_params)
+    user = User.find(session[:user_id])
+    concert = user.concerts.create!(concert_params)
     render json: concert, status: :created
+  end
+
+  def update
+    concert = find_concert
+    concert.update!(concert_params)
+    render json: concert, status: :accepted
   end
 
   def destroy
@@ -26,7 +33,7 @@ class ConcertsController < ApplicationController
   private
 
   def concert_params
-    params.permit(:user_id, :band_logo, :band, :venue, :location, :date)
+    params.permit(:band_logo, :band, :venue, :location, :date)
   end
 
   def find_concert
