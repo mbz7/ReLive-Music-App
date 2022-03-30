@@ -7,7 +7,7 @@ function AddText({ onAddNewText }) {
   function handleTextSubmit(e) {
     e.preventDefault();
     const data = {
-      text_summary: newText,
+      text_comment: newText,
       concert_id: "1",
     };
     fetch("/concert_summaries", {

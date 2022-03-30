@@ -1,14 +1,14 @@
 import React from "react";
 import { Col } from "react-bootstrap";
-import ConcertSummary from "./ConcertSummary";
+import ConcertComment from "./ConcertComment";
 
-function ConcertSummaryList({ text, currentUser }) {
+function ConcertCommentList({ text, currentUser }) {
   return (
     <>
       {text.map((t) => {
         return (
           <Col lg={10} className="gap-3 mt-3 mb-5 mx-auto">
-            <ConcertSummary key={t.id} id={t.id} text={t.text_summary} currentUser={currentUser}/>
+            <ConcertComment key={t.id} id={t.id} text={t.text_comment} currentUser={currentUser}/>
             {/* handleDeleteText={handleDeleteText} onUpdateText={onUpdateText}  */}
           </Col>
         );
@@ -17,4 +17,4 @@ function ConcertSummaryList({ text, currentUser }) {
   );
 }
 
-export default ConcertSummaryList;
+export default ConcertCommentList;

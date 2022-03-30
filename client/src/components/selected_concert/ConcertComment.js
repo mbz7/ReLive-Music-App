@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 
-function ConcertSummary({ id, text, onUpdateText, handleDeleteText, currentUser }) {
+function ConcertComment({ id, text, onUpdateText, handleDeleteText, currentUser }) {
   // function handleDeleteText() {
   //   console.log("test delete");
   //   fetch(`/concert_summaries/${id}`, {
@@ -34,4 +34,4 @@ function ConcertSummary({ id, text, onUpdateText, handleDeleteText, currentUser 
   );
 }
 
-export default ConcertSummary;
+export default ConcertComment;

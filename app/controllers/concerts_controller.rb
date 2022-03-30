@@ -9,7 +9,7 @@ class ConcertsController < ApplicationController
 
   def show
     concert = find_concert
-    render json: concert, serializer: ConcertWithImageVideoSummarySerializerSerializer
+    render json: concert, serializer: ConcertWithImageVideoCommentSerializerSerializer
   end
 
   def create
@@ -26,7 +26,7 @@ class ConcertsController < ApplicationController
   private
 
   def concert_params
-    params.permit(:user_id, :band, :venue, :location, :date)
+    params.permit(:user_id, :band_logo, :band, :venue, :location, :date)
   end
 
   def find_concert

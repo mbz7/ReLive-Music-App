@@ -1,9 +1,10 @@
 import React from "react";
-import { Col, Card, Row, Button } from "react-bootstrap";
+import { Col, Card, Row, Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 // import ConcertEditModal from "./ConcertEditModal";
 
 function ConcertCard({
+  logo,
   band,
   venue,
   location,
@@ -21,7 +22,7 @@ function ConcertCard({
             <Row className="rowstyle">
               <Col sm={12} md={2} lg={2} className="m-0 p-0">
                 <div className="h-100 w-100 d-flex align-items-center p-4">
-                  <h5 className="mx-auto">band logo</h5>
+                  <Image src={logo} thumbnail />
                 </div>
               </Col>
               <Col className="d-flex justify-content-center align-items-center mt-3 p-2">

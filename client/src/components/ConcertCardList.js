@@ -14,6 +14,7 @@ function ConcertCardList({ concerts, setConcerts, currentUser, handleDelete, set
                 id={concert.id}
                 
                 band={concert.band}
+                logo={concert.logo}
                 venue={concert.venue}
                 location={concert.location}
                 date={concert.date}

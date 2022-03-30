@@ -4,13 +4,14 @@ puts '🗑 Destroying old data...'
 Concert.destroy_all
 Image.destroy_all
 Video.destroy_all
-ConcertSummary.destroy_all
+ConcertComment.destroy_all
 
 # create concerts
 puts 'Creating concerts...'
 c1 =
   Concert.create!(
     user_id: "1",
+    band_logo: 'https://pngset.com/images/red-hot-chili-peppers-logo-rhcp-2-logo-high-resolution-logo-red-hot-chili-peppers-cross-transparent-png-2527887.png',
     band: 'Red Hot Chili Peppers',
     venue: 'Globe Life Field',
     location: 'Arlington, TX',
@@ -19,6 +20,7 @@ c1 =
 c2 =
   Concert.create!(
     user_id: "1",
+    band_logo: 'https://pngset.com/images/red-hot-chili-peppers-logo-rhcp-2-logo-high-resolution-logo-red-hot-chili-peppers-cross-transparent-png-2527887.png',
     band: 'Red Hot Chili Peppers',
     venue: 'SoFi Stadium',
     location: 'Inglewood, CA',
@@ -27,6 +29,7 @@ c2 =
 c3 =
   Concert.create!(
     user_id: "1",
+    band_logo: 'https://pngset.com/images/red-hot-chili-peppers-logo-rhcp-2-logo-high-resolution-logo-red-hot-chili-peppers-cross-transparent-png-2527887.png',
     band: 'Red Hot Chili Peppers',
     venue: 'Nationals Park',
     location: 'Washington, D.C.',
@@ -72,10 +75,10 @@ Image.create!(
   concert_id: c2.id,
 )
 
-# create concert_summaries
-puts 'Creating Concert Summaries'
-ConcertSummary.create!(
-  text_summary:
+# create concert_comments
+puts 'Creating Concert Comments'
+ConcertComment.create!(
+  text_comment:
     'Fun concert, got to go back stage and met a new bass player who is willing to jam.',
   concert_id: c1.id,
 )

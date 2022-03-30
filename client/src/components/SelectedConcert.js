@@ -4,7 +4,7 @@ import { Row, Container, Col } from "react-bootstrap";
 import ConcertDetail from "./selected_concert/ConcertDetail";
 import ConcertImageList from "./selected_concert/ConcertImageList";
 import ConcertVideoList from "./selected_concert/ConcertVideoList";
-import ConcertSummaryList from "./selected_concert/ConcertSummaryList";
+import ConcertCommentList from "./selected_concert/ConcertCommentList";
 import AddImage from "./selected_concert/AddImage";
 import AddVideo from "./selected_concert/AddVideo";
 import AddText from "./selected_concert/AddText";
@@ -13,11 +13,11 @@ function SelectedConcert({currentUser}) {
   const [concert, setConcert] = useState({
     images: [],
     videos: [],
-    concert_summaries: [],
+    concert_comments: [],
   });
   const images = concert.images;
   const videos = concert.videos;
-  const text = concert.concert_summaries;
+  const text = concert.concert_comments;
   const { id } = useParams();
   const concertId = concert.id;
 
@@ -51,7 +51,7 @@ function SelectedConcert({currentUser}) {
     setConcert((concert) => {
       return {
         ...concert,
-        concert_summaries: [...concert.concert_summaries, newText],
+        concert_comments: [...concert.concert_comments, newText],
       };
     });
   };
@@ -134,7 +134,7 @@ function SelectedConcert({currentUser}) {
             </Row>
             <hr />
             <Row className="mx-auto text-center">
-              <ConcertSummaryList text={text} currentUser={currentUser} />
+              <ConcertCommentList text={text} currentUser={currentUser} />
               {/* handleDeleteText={handleDeleteText} */}
             </Row>
           </Col>
