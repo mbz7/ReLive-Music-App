@@ -4,9 +4,9 @@ import { Container } from "react-bootstrap";
 function Footer() {
   return (
     <>
-      <Container fluid className="p-5 bg-light">
+      <Container fluid className="p-5 footer-bg">
         <Container>
-          <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top p-4">
+          <footer className=" footer-bg-border d-flex flex-wrap justify-content-between align-items-center py-3 my-4 p-4">
             <p className="col-md-4 mb-0 text-muted">© 2021 Company, Inc</p>
 
             {/* <a

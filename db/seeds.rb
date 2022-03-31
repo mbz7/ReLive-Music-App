@@ -11,7 +11,7 @@ puts 'Creating concerts...'
 c1 =
   Concert.create!(
     user_id: "1",
-    band_logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Red_Hot_Chili_Peppers_logo.png',
+    band_logo: 'https://www.seekpng.com/png/full/330-3303146_symbol-red-hot-chili-peppers-logo-png-red.png',
     band: 'Red Hot Chili Peppers',
     venue: 'Globe Life Field',
     location: 'Arlington, TX',
@@ -20,7 +20,7 @@ c1 =
 c2 =
   Concert.create!(
     user_id: "1",
-    band_logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Red_Hot_Chili_Peppers_logo.png',
+    band_logo: 'https://www.seekpng.com/png/full/330-3303146_symbol-red-hot-chili-peppers-logo-png-red.png',
     band: 'Red Hot Chili Peppers',
     venue: 'SoFi Stadium',
     location: 'Inglewood, CA',
@@ -29,7 +29,7 @@ c2 =
 c3 =
   Concert.create!(
     user_id: "1",
-    band_logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Red_Hot_Chili_Peppers_logo.png',
+    band_logo: 'https://www.seekpng.com/png/full/330-3303146_symbol-red-hot-chili-peppers-logo-png-red.png',
     band: 'Red Hot Chili Peppers',
     venue: 'Nationals Park',
     location: 'Washington, D.C.',

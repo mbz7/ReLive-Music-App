@@ -27,11 +27,11 @@ function AddImage({ onAddNewImage, concertId }) {
 
   return (
     <>
-      <Col className="mb-3"><h5>Add An Image Below</h5></Col>
+      <Col className="mb-3"><h5 className="h5-lb">Add An Image Below</h5></Col>
       <hr />
       <Stack direction="horizontal" gap={3}>
         <Col>
-          <Form.Label htmlFor="inputPassword5">IMAGE URL</Form.Label>
+          <Form.Label htmlFor="inputPassword5" className="text-dark">Image Url</Form.Label>
           <Form.Control
             onChange={(e) => setNewImageUrl(e.target.value)}
             size="sm"
@@ -41,7 +41,7 @@ function AddImage({ onAddNewImage, concertId }) {
           />
         </Col>
         <Col>
-          <Form.Label htmlFor="inputPassword5">Image Title</Form.Label>
+          <Form.Label htmlFor="inputPassword5" className="text-dark">Image Title</Form.Label>
           <Form.Control
             onChange={(e) => setNewImageTitle(e.target.value)}
             size="sm"
@@ -54,7 +54,7 @@ function AddImage({ onAddNewImage, concertId }) {
         <Col lg={2}>
           <Button
             className=" mx-auto btn-lg w-100"
-            variant="primary"
+            variant="dark"
             onClick={handleImageSubmit}
           >
             SUBMIT

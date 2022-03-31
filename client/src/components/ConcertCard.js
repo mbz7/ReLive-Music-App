@@ -19,16 +19,16 @@ function ConcertCard({
       <Col sm={12} md={12} lg={12} className="gap-3 mb-5 mt-5  ">
         <Card className="concert-card-div">
           <div className="p-4 mt-2 text-dark gap-3">
-            <Row className="rowstyle">
+            <Row>
               <Col
                 sm={12}
-                md={2}
-                lg={2}
-                className="d-flex align-items-center justify-content-center p-3"
+                md={1}
+                lg={1}
+                className="d-flex align-items-center justify-content-center p-2"
               >
                 <div className="band-logo-container">
                   <Image
-                    className="band-logo p-2"
+                    className="band-logo p-3"
                     src={logo}
                     alt="band_logo"
                     
@@ -43,11 +43,12 @@ function ConcertCard({
                   className="text-center band_card_border-right"
                 >
                   <Card.Title className="update_title_color">
-                    <h1 className=" p-2 h1-card-grad">{band}</h1>
+                    <h1 className="text-dark">{band}</h1>
                   </Card.Title>
+                  {/* <hr className="w-75 mx-auto hr-4"/> */}
                   <Button
-                    variant="outline-light"
-                    className="mx-auto mt-2 btn-md mb-1 btn-lg"
+                    variant="dark"
+                    className="text-right mt-2 btn-md mb-1 btn-lg"
                     as={Link}
                     to={`/concerts/${id}`}
                   >
@@ -107,7 +108,7 @@ function ConcertCard({
               </Col>
             </Row>
           </div>
-          <hr className="hr-grad-2" />
+          {/* <hr className="hr-grad-2" /> */}
           {/* <Card.Footer className="text-muted"></Card.Footer> */}
         </Card>
       </Col>

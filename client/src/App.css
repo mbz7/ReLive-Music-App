@@ -29,14 +29,9 @@ p {
 
 /* Custom Styles */
 
-/* .image-div {
-  max-width: 100px;
-  height: 100px;
-} */
-
 /* ________________________________________________________________ */
 
-/* Home Beer List Page */
+/* Home Concert Page */
 
 .container-home-fluid {
   margin: 0 !important;
@@ -45,7 +40,7 @@ p {
 }
 
 .home-jumbotron {
-  height: 900px;
+  height: 100vh;
   background-color: rgb(231, 231, 231);
   margin: 0;
   padding: 0;
@@ -54,52 +49,14 @@ p {
   /* background-image: url("./img/yvette-de-wit-NYrVisodQ2M-unsplash_edit-2-2.jpg"); */
   background-size: cover;
   background-position: bottom;
-  /* background-repeat: no-repeat; */
-  /* background-attachment: auto; */
+  border-bottom: 5px solid #475668;
+ 
 }
 
 .home_jumbotron_welcome-div {
   border-radius: 10px !important;
-  /* box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2); */
-  /* margin-top: 350px; */
-  padding: 100px;
-  /* background-color: #0911172a; */
-  margin-top: 100px;
-}
-
-.home-jumbotorn > .overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.home-jumbotorn > .jumbotron-inner {
-  position: relative;
-  z-index: 2;
-}
-
-.thumbnail {
-  border: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-/* .home-2-jumbo-gradient{
-    height: 50px;
-    background: #141011;
-    background: -webkit-linear-gradient(#648880, #293f50);
-    background:    -moz-linear-gradient(#648880, #293f50);
-    background:         linear-gradient(#141011, #f1f1f1);
-} */
-
-
-.search-bar-container {
-  padding: 10px;
-  /* border-right: 1px solid #ccc */
-  /* background-color: #1b2e3c; */
+  padding: 50px;
+  margin-top: 200px;
 }
 
 .search-bar {
@@ -126,21 +83,25 @@ input {
 }
 
 .concert-list-container {
-  /* background-color: #192430; */
-  /* padding-top: 50px; */
-  margin-top: -175px;
+  background-color: #e1e8f0;
+  padding-top: 30px;
+  /* margin-top: -175px; */
 }
 
-.band-logo-container {
+.band-logo img {
   background-color: #192430;
   background-blend-mode: multiply;
+  
 }
 
 .band-logo {
-  max-width: 130px;
+  max-width: 120px;
   height: auto;
-  margin-left: 20px;
-  background-color: #192430;
+  margin-left: 50px;
+  /* background-color: #192430; */
+  /* -webkit-filter: grayscale(100%); Safari 6.0 - 9.0 */
+  /* filter: grayscale(100%); */
+  
   
 }
 
@@ -162,7 +123,7 @@ input {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  font-size: 52px;
+  font-size: 60px;
 }
 
 .hr-grad {
@@ -179,6 +140,12 @@ input {
   background: linear-gradient(to top, #1a2980 0%, #26d0ce 50%);
   height: 20px;
 }
+
+/* .hr-4 {
+  color: #ccc;
+  padding: 0px;
+  margin: 5px;
+} */
 
 
 .btn-grad {
@@ -216,19 +183,22 @@ input {
 
 .card {
   border-radius: 10px !important;
-  box-shadow: 0 4px 6px 0 hsla(0, 0%, 78%, 0.913);
+  /* box-shadow: 0 4px 6px 0 hsla(0, 0%, 27%, 0.187); */
+  
 }
 
 .concert-card-div {
-  background-color: #192430;
-  border: 2px #475668 solid;
-  box-shadow: 0 2px 6px 0 #60e9d93f;
+  background-color: #f6fafb;
+  /* border: 1px #324961 solid; */
+  /* box-shadow: 0 2px 6px 0 #60e9d93f; */
+  /* border: linear-gradient(200deg, #1a2980 0%, #26d0ce 50%); */
 
 
 }
 
 .concert-card-div p {
-  color: #dfe8ed;
+  color: #454545;
+  font-size: 15px;
 }
 
 .concert-card-div h2 {
@@ -386,6 +356,14 @@ input {
   margin-bottom: 10px;
   height: 50px;
   font-size: 25px !important;
+}
+
+.footer-bg {
+  background-color: #e1e8f0;
+}
+
+.footer-bg-border {
+  border-top: 1px solid rgb(201, 201, 201);
 }
 
 /* @media (max-width: 768px){

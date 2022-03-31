@@ -8,8 +8,9 @@ import ConcertCommentList from "./selected_concert/ConcertCommentList";
 import AddImage from "./selected_concert/AddImage";
 import AddVideo from "./selected_concert/AddVideo";
 import AddText from "./selected_concert/AddText";
+import "../SelectedConcert.css";
 
-function SelectedConcert({currentUser}) {
+function SelectedConcert({ currentUser }) {
   const [concert, setConcert] = useState({
     images: [],
     videos: [],
@@ -71,12 +72,12 @@ function SelectedConcert({currentUser}) {
 
   return (
     <>
-      <Container fluid className="bg-light">
+      <Container fluid className="div-1">
         <Container className="pb-5">
           <br />
           <br />
           {/* Header Concert Details Section */}
-          <Col className="text-center border p-4 shadow-sm rounded">
+          <Col className="text-center text-dark  p-4 shadow-sm rounded div-2">
             <h1>CONCERT DASHBOARD</h1>
             <hr />
 
@@ -86,31 +87,32 @@ function SelectedConcert({currentUser}) {
           </Col>
 
           {/* Images Section */}
-          <Col className="border border-warning p-4 mt-5 shadow-sm rounded">
-            <Col className="text-center">
+          <Col className="div-2 p-4 mt-5 shadow-sm rounded">
+            <Col className="text-center text-dark">
               <h2>IMAGES</h2>
+              
             </Col>
             <Row className=" d-flex justify-content-start">
               {/* Add An Image */}
-              <Col className="border p-5 m-4 bg-white shadow-sm rounded">
+              <Col className=" p-5 m-4 text-dark shadow-sm rounded div-3">
                 <AddImage onAddNewImage={addImage} concertId={concertId} />
               </Col>
             </Row>
             {/* Image List */}
-            <hr />
+            <hr className="text-dark"/>
             <Row className="mx-auto p-4">
               <ConcertImageList images={images} />
             </Row>
           </Col>
 
           {/* Videos Section  */}
-          <Col className="border border-warning p-4 mt-5 shadow-sm rounded">
-            <Col className="text-center">
+          <Col className="div-2 p-4 mt-5 shadow-sm rounded">
+            <Col className="text-center text-dark">
               <h2>VIDEOS</h2>
             </Col>
             {/* Add A Video */}
             <Row className=" d-flex justify-content-start">
-              <Col className="border p-5 m-4 bg-white shadow-sm rounded">
+              <Col className="border p-5 m-4  shadow-sm rounded div-3">
                 <AddVideo onAddNewVideo={addVideo} />
               </Col>
             </Row>
@@ -122,13 +124,13 @@ function SelectedConcert({currentUser}) {
           </Col>
 
           {/* Concert Journal Section */}
-          <Col className="border border-warning p-4 mt-5 shadow-sm rounded">
-            <Col className="text-center">
+          <Col className="div-2 p-4 mt-5 shadow-sm rounded">
+            <Col className="text-center text-dark">
               <h2>CONCERT JOURNAL</h2>
             </Col>
             {/* Add Text */}
             <Row className=" d-flex justify-content-start">
-              <Col className="border p-5 m-4 bg-white shadow-sm rounded">
+              <Col className="border p-5 m-4 shadow-sm rounded div-3">
                 <AddText onAddNewText={addText} />
               </Col>
             </Row>

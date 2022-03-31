@@ -10,7 +10,7 @@ function AddText({ onAddNewText }) {
       text_comment: newText,
       concert_id: "1",
     };
-    fetch("/concert_summaries", {
+    fetch("/concert_comments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -27,7 +27,7 @@ function AddText({ onAddNewText }) {
   return (
     <>
       <Col className="mb-3">
-        <h5>Add A Concert Journal Entry below</h5>
+        <h5 className="h5-lb">Add A Concert Journal Entry below</h5>
       </Col>
       <hr />
       <Stack direction="horizontal" gap={3}>

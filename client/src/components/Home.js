@@ -5,37 +5,28 @@ import { Navigate } from "react-router-dom";
 import ConcertCardList from "./ConcertCardList";
 import NewPost from "./NewPost";
 
-function Home({currentUser }) {
+function Home({ currentUser }) {
   const [search, setSearch] = useState("");
   const [concerts, setConcerts] = useState([]);
 
   // function that takes edit post and bring its up to home, checks to see if concert.id matches the post.id passed up, if it doesn't match returns the regular concert.
   const editPost = (post) => {
-    setConcerts(concerts => {
-      return concerts.map(c => {
+    setConcerts((concerts) => {
+      return concerts.map((c) => {
         if (c.id === post.id) {
-          return post
+          return post;
         } else {
-          return c
+          return c;
         }
-      })
-    })
-  }
+      });
+    });
+  };
 
   const addPost = (post) => {
-    setConcerts(concerts => {
-      return [...concerts, post]
-    })
-  }
-
-  // const [brewerySearch, setBrewerySearch] = useState("");
-  // const [stateSearch, setStateSearch] = useState("");
-
-  // useEffect(() => {
-  //   fetch("/concerts")
-  //     .then((r) => r.json())
-  //     .then((data) => setNewPost(data));
-  // }, [newPost]);
+    setConcerts((concerts) => {
+      return [...concerts, post];
+    });
+  };
 
   useEffect(() => {
     fetch("/concerts")
@@ -44,11 +35,6 @@ function Home({currentUser }) {
         setConcerts(concertList);
       });
   }, []);
-
-  // function handleDelete(id) {
-  //   const newConcerts = concerts.filter(concert => concert.id !== id)
-  //   setConcerts(newConcerts)
-  // }
 
   const changeSearchStringInState = (searchString) => {
     setSearch(searchString);
@@ -76,12 +62,6 @@ function Home({currentUser }) {
     });
   }
 
-  
-
-  // function addPost(newPost) {
-  //   setNewPost([...concerts, newPost])
-  // }
-
   return (
     <>
       {currentUser ? (
@@ -106,29 +86,10 @@ function Home({currentUser }) {
                     </Col>
                     <hr className="mx-auto hr-grad" />
                     <Col className="text-center">
-                      <NewPost
-                        addPost={addPost}
-                        // currentUser={currentUser}
-                      />
+                      <NewPost addPost={addPost} />
                     </Col>
                   </div>
                 </Col>
-              </div>
-            </div>
-            {/* <div className="home-2-jumbo-gradient"><span></span></div> */}
-            <div className="concert-list-container">
-              <Container>
-                {/* <Col className="text-center text-light">
-                  <h3>Concert List</h3>
-                  <p>View Past Concerts or Add A New One Below</p>
-                  <hr className="w-100 mx-auto mt-5 hr-grad-2" />
-                </Col> */}
-                {/* <hr className="w-100 mx-auto mt-2 hr-grad-2" /> */}
-                {/* <div className="justify-content-center"> */}
-
-                {/* <div className="col-md-border col-lg-2"></div> */}
-
-                {/* </div> */}
                 <hr className="w-100 mx-auto mt-0 hr-grad-2" />
 
                 <Col className=" search-bar-container text-center">
@@ -147,10 +108,25 @@ function Home({currentUser }) {
                       onChange={(e) =>
                         changeSearchStringInState(e.target.value)
                       }
-                      className="w-75"
+                      className="w-50"
                     />
                   </Col>
                 </Col>
+              </div>
+            </div>
+            {/* <div className="home-2-jumbo-gradient"><span></span></div> */}
+            <div className="concert-list-container">
+              <Container>
+                <Col className="text-left text-dark pt-5">
+                  <h2>Concert List</h2>
+                  <hr />
+                </Col>
+                {/* <hr className="w-100 mx-auto mt-2 hr-grad-2" /> */}
+                {/* <div className="justify-content-center"> */}
+
+                {/* <div className="col-md-border col-lg-2"></div> */}
+
+                {/* </div> */}
 
                 <Row>
                   <Col>

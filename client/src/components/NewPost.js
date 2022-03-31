@@ -38,41 +38,14 @@ export default function NewPost({ addPost,  }) {
   })
   }
 
-  // function handleSubmit(e) {
-  //   e.preventDefault();
-  //   const formData = {
-  //     guest_id: guestId,
-  //     episode_id: episodeId,
-  //     rating: parseInt(rating),
-  //   };
-  //   fetch("/appearances", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(formData),
-  //   }).then((r) => {
-  //     if (r.ok) {
-  //       r.json().then((appearance) => {
-  //         onAddGuest(appearance.guest);
-  //         setFormErrors([]);
-  //       });
-  //     } else {
-  //       r.json().then((err) => setFormErrors(err.errors));
-  //     }
-  //   });
-  // }
-
   return (
     <div>
       <Button
         // variant="info"
         size="lg"
-        className="mt-3 new-post-btn btn-grad"
+        className="mt-3 btn-grad"
         onClick={handleShow}
-      >
-        {" "}
-        Add A New Concert{" "}
+      >Add A New Concert
       </Button>
       <Modal
         size="lg"

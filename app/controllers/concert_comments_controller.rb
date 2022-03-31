@@ -25,16 +25,16 @@ class ConcertCommentsController < ApplicationController
 
   private
 
-  def summary_params
+  def comment_params
     params.permit(:text_comment, :concert_id)
   end
 
-  def find_summary
+  def find_comment
     ConcertComment.find(params[:id])
   end
 
   def render_not_found_response
-    render json: { error: 'Concert summary not found' }, status: :not_found
+    render json: { error: 'Concert comment not found' }, status: :not_found
   end
 
   def render_unprocessable_entity_response(exception)

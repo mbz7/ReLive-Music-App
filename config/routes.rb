@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # resources :users, only: [:show, :create, :update]
   resources :users
-  resources :concert_summaries, only: %i[index show create destroy]
+  resources :concert_comments, only: %i[index show create destroy]
   resources :images, only: %i[index show create destroy]
   resources :videos, only: %i[index show create destroy]
   resources :concerts, only: %i[index show create update destroy]

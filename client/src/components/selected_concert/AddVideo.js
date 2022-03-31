@@ -7,7 +7,7 @@ function AddVideo({ onAddNewVideo }) {
   //   const [newImagePost, setNewImagePost] = useState({});
   // const youtubeURL = "www.youtube.com/embed/";
   const youtubeURL = "https://www.youtube.com/embed/";
-  const newURL = `${youtubeURL}${videoUrl}`
+  const newURL = `${youtubeURL}${videoUrl}`;
 
   function handleVideoSubmit(e) {
     e.preventDefault();
@@ -32,7 +32,7 @@ function AddVideo({ onAddNewVideo }) {
   return (
     <>
       <Col className="mb-3">
-        <h5>Add A Video Below</h5>
+        <h5 className="h5-lb">Add A Video Below</h5>
       </Col>
       <hr />
       <Stack direction="horizontal" gap={3}>
@@ -60,7 +60,7 @@ function AddVideo({ onAddNewVideo }) {
         <Col lg={2}>
           <Button
             className=" mx-auto btn-lg w-100"
-            variant="primary"
+            variant="dark"
             onClick={handleVideoSubmit}
           >
             SUBMIT

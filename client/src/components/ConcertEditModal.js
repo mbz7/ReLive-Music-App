@@ -68,7 +68,7 @@ export default function ConcertEditModal({ editPost, id }) {
   return (
     <div>
       <Button
-        variant="outline-light"
+        variant="outline-dark"
         size="sm"
         className="new-post-btn mt-3 mb-3 w-75"
         onClick={handleShow}
