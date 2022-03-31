@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Container, Form } from "react-bootstrap";
+import { Row, Col, Container, Form, Button } from "react-bootstrap";
 // import Search from "../components/Search";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import ConcertCardList from "./ConcertCardList";
 import NewPost from "./NewPost";
 
@@ -85,42 +85,51 @@ function Home({ currentUser }) {
                       </p>
                     </Col>
                     <hr className="mx-auto hr-grad" />
-                    <Col className="text-center">
+                    {/* <Col className="text-center">
                       <NewPost addPost={addPost} />
-                    </Col>
+                    </Col> */}
                   </div>
+                  <Button className="btn-grad text-center" href="#concert-list">
+                    Get Started
+                  </Button>
                 </Col>
                 <hr className="w-100 mx-auto mt-0 hr-grad-2" />
-
-                <Col className=" search-bar-container text-center">
-                  <Col
-                    sm={6}
-                    lg={12}
-                    className="mb-1 mt-1 search-bar mx-auto"
-                    controlId="formBasicSearch"
-                  >
-                    {/* <Form.Label className="text-light p-1">
-                        <h4>Search For Concerts</h4>
-                      </Form.Label> */}
-                    <input
-                      type="email"
-                      placeholder="Search Band..."
-                      onChange={(e) =>
-                        changeSearchStringInState(e.target.value)
-                      }
-                      className="w-50"
-                    />
-                  </Col>
-                </Col>
               </div>
             </div>
             {/* <div className="home-2-jumbo-gradient"><span></span></div> */}
-            <div className="concert-list-container">
+            <div className="concert-list-container" id="concert-list">
               <Container>
-                <Col className="text-left text-dark pt-5">
-                  <h2>Concert List</h2>
-                  <hr />
-                </Col>
+                <Row className="d-flex align-items-center justify-content-center p-5">
+                  <div className="text-center p-5 text-dark">
+                    <h1>Concert List</h1>
+                  </div>
+                  <Col className="concert-header-div">
+                    <Row className="d-flex align-items-center justify-content-center p-5">
+                      <Col lg={8} className=" search-bar-container text-center">
+                        <div
+                          className="ms-auto search-bar mx-auto"
+                          controlId="formBasicSearch"
+                        >
+                          {/* <Form.Label className="text-light p-1">
+                        <h4>Search For Concerts</h4>
+                      </Form.Label> */}
+                          <input
+                            type="email"
+                            placeholder="Search For A Concert Here..."
+                            onChange={(e) =>
+                              changeSearchStringInState(e.target.value)
+                            }
+                            className="w-100"
+                          />
+                        </div>
+                      </Col>
+                      <Col className="text-center">
+                        <NewPost addPost={addPost} />
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+                <hr />
                 {/* <hr className="w-100 mx-auto mt-2 hr-grad-2" /> */}
                 {/* <div className="justify-content-center"> */}
 

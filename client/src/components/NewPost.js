@@ -43,7 +43,7 @@ export default function NewPost({ addPost,  }) {
       <Button
         // variant="info"
         size="lg"
-        className="mt-3 btn-grad"
+        // className="mt-3"
         onClick={handleShow}
       >Add A New Concert
       </Button>

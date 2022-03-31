@@ -16,7 +16,7 @@ function ConcertCard({
 }) {
   return (
     <>
-      <Col sm={12} md={12} lg={12} className="gap-3 mb-5 mt-5  ">
+      <Col sm={12} md={12} lg={12} className="gap-3 mb-4 mt-3  ">
         <Card className="concert-card-div">
           <div className="p-4 mt-2 text-dark gap-3">
             <Row>
@@ -47,7 +47,7 @@ function ConcertCard({
                   </Card.Title>
                   {/* <hr className="w-75 mx-auto hr-4"/> */}
                   <Button
-                    variant="dark"
+                    variant="outline-dark"
                     className="text-right mt-2 btn-md mb-1 btn-lg"
                     as={Link}
                     to={`/concerts/${id}`}

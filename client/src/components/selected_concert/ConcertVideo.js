@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 function ConcertVideo({ video, title }) {
   return (
     <>
-      <Card>
+      <Card className="mt-2 mb-2">
         <div className="embed-responsive embed-responsive-16by9 p-3">
           <iframe
             title={title}

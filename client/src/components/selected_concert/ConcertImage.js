@@ -12,7 +12,7 @@ function ConcertImage({ image, title }) {
   //   }]
   return (
     <>
-      <Col md={4}>
+      <Col md={4} className="mt-2 mb-2">
         <ImageViewer>
           {/* <Card className="m-2 rounded">
           <Card.Img variant="top" className="thumbnail" src={image} />
