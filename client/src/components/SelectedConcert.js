@@ -126,7 +126,7 @@ function SelectedConcert({ currentUser }) {
           {/* Concert Journal Section */}
           <Col className="div-2 p-4 mt-5 shadow-sm rounded">
             <Col className="text-center text-dark">
-              <h2>CONCERT JOURNAL</h2>
+              <h2>COMMENTS</h2>
             </Col>
             {/* Add Text */}
             <Row className=" d-flex justify-content-start">

@@ -27,12 +27,12 @@ function AddText({ onAddNewText }) {
   return (
     <>
       <Col className="mb-3">
-        <h5 className="h5-lb">Add A Concert Journal Entry below</h5>
+        <h5 className="h5-lb">Add A Comment Below</h5>
       </Col>
       <hr />
       <Stack direction="horizontal" gap={3}>
         <Col>
-          <Form.Label htmlFor="inputPassword5">Text</Form.Label>
+          <Form.Label htmlFor="inputPassword5"></Form.Label>
           <Form.Control
             onChange={(e) => setNewText(e.target.value)}
             size="sm"
