@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Col, Stack } from "react-bootstrap";
 
-function AddVideo({ onAddNewVideo }) {
+function AddVideo({ onAddNewVideo, concertId }) {
   const [videoUrl, setVideoUrl] = useState("");
   const [videoTitle, setVideoTitle] = useState("");
   //   const [newImagePost, setNewImagePost] = useState({});
@@ -15,7 +15,7 @@ function AddVideo({ onAddNewVideo }) {
     const data = {
       video_url: newURL,
       title: videoTitle,
-      concert_id: "1",
+      concert_id: concertId,
     };
     fetch("/videos", {
       method: "POST",

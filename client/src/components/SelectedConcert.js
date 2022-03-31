@@ -90,7 +90,6 @@ function SelectedConcert({ currentUser }) {
           <Col className="div-2 p-4 mt-5 shadow-sm rounded">
             <Col className="text-center text-dark">
               <h2>IMAGES</h2>
-              
             </Col>
             <Row className=" d-flex justify-content-start">
               {/* Add An Image */}
@@ -99,7 +98,7 @@ function SelectedConcert({ currentUser }) {
               </Col>
             </Row>
             {/* Image List */}
-            <hr className="text-dark"/>
+            <hr className="text-dark" />
             <Row className="mx-auto p-4">
               <ConcertImageList images={images} />
             </Row>
@@ -113,13 +112,13 @@ function SelectedConcert({ currentUser }) {
             {/* Add A Video */}
             <Row className=" d-flex justify-content-start">
               <Col className="border p-5 m-4  shadow-sm rounded div-3">
-                <AddVideo onAddNewVideo={addVideo} />
+                <AddVideo onAddNewVideo={addVideo} concertId={concertId} />
               </Col>
             </Row>
             {/* Video List */}
             <hr />
             <Row className="mx-auto p-4">
-              <ConcertVideoList videos={videos} />
+              <ConcertVideoList videos={videos}  />
             </Row>
           </Col>
 
@@ -131,7 +130,7 @@ function SelectedConcert({ currentUser }) {
             {/* Add Text */}
             <Row className=" d-flex justify-content-start">
               <Col className="border p-5 m-4 shadow-sm rounded div-3">
-                <AddText onAddNewText={addText} />
+                <AddText onAddNewText={addText} concertId={concertId}/>
               </Col>
             </Row>
             <hr />

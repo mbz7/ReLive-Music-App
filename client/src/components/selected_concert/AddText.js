@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Form, Button, Col, Stack } from "react-bootstrap";
 
-function AddText({ onAddNewText }) {
+function AddText({ onAddNewText, concertId }) {
   const [newText, setNewText] = useState({});
 
   function handleTextSubmit(e) {
     e.preventDefault();
     const data = {
       text_comment: newText,
-      concert_id: "1",
+      concert_id: concertId,
     };
     fetch("/concert_comments", {
       method: "POST",
