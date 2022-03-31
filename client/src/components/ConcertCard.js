@@ -99,7 +99,7 @@ function ConcertCard({
                       onClick={() => handleDelete(id)}
                       variant="outline-danger"
                       size="sm"
-                      className="w-75"
+                      className="w-50"
                     >
                       Delete
                     </Button>

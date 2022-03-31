@@ -70,11 +70,11 @@ export default function ConcertEditModal({ editPost, id }) {
       <Button
         variant="outline-dark"
         size="sm"
-        className="new-post-btn mt-3 mb-3 w-75"
+        className="new-post-btn mt-3 mb-2 w-50"
         onClick={handleShow}
       >
         {" "}
-        Edit Concert{" "}
+        Edit{" "}
       </Button>
       <Modal
         size="lg"

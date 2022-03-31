@@ -103,7 +103,7 @@ function Home({ currentUser }) {
                   
                   <Col className="concert-header-div">
                     <Row className="d-flex align-items-center justify-content-center">
-                    <div className="text-center p-2 text-dark">
+                    <div className="text-center p-3 text-dark">
                         <h1>Concert List</h1>
                         <hr />
                   </div>
