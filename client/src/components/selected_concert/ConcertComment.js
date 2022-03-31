@@ -16,7 +16,7 @@ function ConcertComment({ id, text, onUpdateText, handleDeleteText, currentUser 
     <>
       <Card body className="p-2 gap-3">
         <p>"{text}"</p>
-        <p>- {currentUser.username}</p>
+        {/* <p>- {currentUser.username}</p> */}
         {/* <Button variant="outline-dark" className="m-3">
           Edit Text
         </Button>

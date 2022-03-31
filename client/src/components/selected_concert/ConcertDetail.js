@@ -7,7 +7,7 @@ function ConcertDetail({ concert }) {
   return (
     <>
       <Col sm={12} md={12} lg={12} className="gap-3 mb-5 mt-5 ">
-        <Card className="div-3">
+        <Card className="">
           <div className="p-4 mt-2 gap-3">
             <Row>
               <Col

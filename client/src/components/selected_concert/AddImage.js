@@ -31,7 +31,7 @@ function AddImage({ onAddNewImage, concertId }) {
       <hr />
       <Stack direction="horizontal" gap={3}>
         <Col>
-          <Form.Label htmlFor="inputPassword5" className="text-dark">Image Url</Form.Label>
+          <Form.Label htmlFor="inputPassword5" className="">Image Url</Form.Label>
           <Form.Control
             onChange={(e) => setNewImageUrl(e.target.value)}
             size="sm"
@@ -41,7 +41,7 @@ function AddImage({ onAddNewImage, concertId }) {
           />
         </Col>
         <Col>
-          <Form.Label htmlFor="inputPassword5" className="text-dark">Image Title</Form.Label>
+          <Form.Label htmlFor="inputPassword5" className="">Image Title</Form.Label>
           <Form.Control
             onChange={(e) => setNewImageTitle(e.target.value)}
             size="sm"

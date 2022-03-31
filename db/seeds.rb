@@ -20,11 +20,11 @@ c1 =
 c2 =
   Concert.create!(
     user_id: "1",
-    band_logo: 'https://www.seekpng.com/png/full/330-3303146_symbol-red-hot-chili-peppers-logo-png-red.png',
-    band: 'Red Hot Chili Peppers',
-    venue: 'SoFi Stadium',
-    location: 'Inglewood, CA',
-    date: '09/08/2022',
+    band_logo: 'https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/062013/foo_fighters.png?itok=gPXJLdzM',
+    band: 'Foo Fighters',
+    venue: 'Las Vegas Festival Grounds',
+    location: 'Las Vegas, NV',
+    date: '07/12/2019',
   )
 c3 =
   Concert.create!(
@@ -51,7 +51,7 @@ Video.create!(
 Video.create!(
   video_url: 'https://www.youtube.com/embed/EeoYtmBTbLM',
   title: 'Red Hot Chili Peppers Live 2004',
-  concert_id: c2.id,
+  concert_id: c1.id,
 )
 
 # create images
@@ -72,7 +72,7 @@ Image.create!(
   image_url:
     'https://www.rollingstone.com/wp-content/uploads/2019/03/10056498g.jpg',
   title: 'Red Hot Chili Peppers',
-  concert_id: c2.id,
+  concert_id: c1.id,
 )
 
 # create concert_comments
