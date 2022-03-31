@@ -41,7 +41,7 @@ export default function NewPost({ addPost,  }) {
   return (
     <div>
       <Button
-        // variant="info"
+        variant="info"
         size="lg"
         // className="mt-3"
         onClick={handleShow}

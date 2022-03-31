@@ -6,7 +6,7 @@ import Home from "./components/Home";
 import Dashboard from "./components/Dashboard";
 import Account from "./components/Account";
 import SelectedConcert from "./components/SelectedConcert";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import UserPage from "./components/UserPage";
@@ -39,7 +39,7 @@ function App() {
 
         <Container>
           <Navbar.Brand as={Link} to="/home">
-            reLive Music
+            re-Live Music
           </Navbar.Brand>
           <div className="">
             <Navbar.Toggle aria-controls="navbarScroll" />
@@ -140,9 +140,9 @@ function App() {
           />
         </Routes>
       </div>
-      <div>
+      {/* <div>
         <Footer />
-      </div>
+      </div> */}
     </>
   );
 }

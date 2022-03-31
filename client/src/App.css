@@ -59,11 +59,11 @@ p {
 }
 
 .concert-header-div {
-  border-radius: 20px;
+  border-radius: 10px;
   /* border: 2px #ccc solid; */
   box-shadow: 0 4px 4px 0 hsla(0, 0%, 0%, 0.2);
-  background-color: rgba(243, 243, 243, 0.39);
-  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.548);
+  padding: 50px;
   height: auto;
 }
 
@@ -87,12 +87,15 @@ p {
 }
 
 input {
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 .concert-list-container {
-  background-color: #e1e8f0;
-  padding-top: 30px;
+  background-color: rgb(218, 218, 218);
+  /* background-image: url("./img/background-pattern.png");
+  background-size: cover;
+  background-position: bottom; */
+  /* padding-top: 30px; */
   /* margin-top: -175px; */
 }
 
@@ -191,7 +194,7 @@ input {
 }
 
 .concert-card-div {
-  background-color: #f6fafb;
+  /* background-color: #f6fafb; */
   /* border: 1px #324961 solid; */
   /* box-shadow: 0 2px 6px 0 #60e9d93f; */
   /* border: linear-gradient(200deg, #1a2980 0%, #26d0ce 50%); */
@@ -360,7 +363,7 @@ input {
 }
 
 .footer-bg {
-  background-color: #e1e8f0;
+  /* background-color: #e1e8f0; */
 }
 
 .footer-bg-border {

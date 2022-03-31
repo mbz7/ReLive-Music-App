@@ -100,11 +100,13 @@ function Home({ currentUser }) {
             <div className="concert-list-container" id="concert-list">
               <Container>
                 <Row className="d-flex align-items-center justify-content-center p-5">
-                  <div className="text-center p-5 text-dark">
-                    <h1>Concert List</h1>
-                  </div>
+                  
                   <Col className="concert-header-div">
-                    <Row className="d-flex align-items-center justify-content-center p-5">
+                    <Row className="d-flex align-items-center justify-content-center">
+                    <div className="text-center p-2 text-dark">
+                        <h1>Concert List</h1>
+                        <hr />
+                  </div>
                       <Col lg={8} className=" search-bar-container text-center">
                         <div
                           className="ms-auto search-bar mx-auto"
