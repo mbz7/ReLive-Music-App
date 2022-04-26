@@ -10,6 +10,7 @@ import SelectedConcert from "./components/SelectedConcert";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import UserPage from "./components/UserPage";
+import logo from "./img/relive_logo_main.png";
 
 function App() {
   const [currentUser, setCurrentUser] = useState("");
@@ -38,7 +39,7 @@ function App() {
       <Navbar variant="dark">
         <Container>
           <Navbar.Brand as={Link} to="/home">
-            RELIVE Music
+            <img src={logo} />
           </Navbar.Brand>
           <div className="">
             <Navbar.Toggle aria-controls="navbarScroll" />

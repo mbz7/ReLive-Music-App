@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Modal } from "react-bootstrap";
 
-export default function NewPost({ addPost,  }) {
+export default function NewPost({ addPost }) {
   const [show, setShow] = useState(false);
   const [logo, setLogo] = useState("");
   const [band, setBand] = useState("");
@@ -31,21 +31,16 @@ export default function NewPost({ addPost,  }) {
         if (newPost.errors) {
           //setErrors
         } else {
-          addPost(newPost)
-    handleClose();
-
+          addPost(newPost);
+          handleClose();
         }
-  })
+      });
   }
 
   return (
     <div>
-      <Button
-        variant="info"
-        size="lg"
-        className="w-75"
-        onClick={handleShow}
-      >Add A New Concert
+      <Button variant="dark" size="lg" className="w-75" onClick={handleShow}>
+        Add A New Concert
       </Button>
       <Modal
         size="lg"
@@ -59,7 +54,7 @@ export default function NewPost({ addPost,  }) {
         </Modal.Header>
         <Modal.Body>
           <Modal.Body>
-          <Form.Label htmlFor="inputPassword5">BAND LOGO</Form.Label>
+            <Form.Label htmlFor="inputPassword5">BAND LOGO</Form.Label>
             <Form.Control
               onChange={(e) => setLogo(e.target.value)}
               size="sm"

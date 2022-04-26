@@ -68,6 +68,18 @@ Video.create!(
   concert_id: c2.id,
 )
 
+Video.create!(
+  video_url: 'https://www.youtube.com/embed/O2zG8mgY_H4', 
+  title: 'alt-J live at Royal',
+  concert_id: c2.id,
+)
+
+Video.create!(
+  video_url: 'https://www.youtube.com/embed/svrDD4zsZuI', 
+  title: 'alt-J live at Royal 2',
+  concert_id: c2.id,
+)
+
 # create images
 puts 'Creating Images'
 Image.create!(
