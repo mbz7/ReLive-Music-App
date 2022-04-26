@@ -30,6 +30,11 @@ function SelectedConcert({ currentUser }) {
       });
   }, [id]);
 
+  //hook to make page automatically scroll to the top once rendered
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const addImage = (newImage) => {
     //fetch to add image to concert
     //inside callback once you have a new image from that post fetch:
@@ -118,7 +123,7 @@ function SelectedConcert({ currentUser }) {
             {/* Video List */}
             <hr />
             <Row className="mx-auto p-4">
-              <ConcertVideoList videos={videos}  />
+              <ConcertVideoList videos={videos} />
             </Row>
           </Col>
 
@@ -130,7 +135,7 @@ function SelectedConcert({ currentUser }) {
             {/* Add Text */}
             <Row className=" d-flex justify-content-start">
               <Col className="border p-5 m-4 shadow-sm rounded div-3">
-                <AddText onAddNewText={addText} concertId={concertId}/>
+                <AddText onAddNewText={addText} concertId={concertId} />
               </Col>
             </Row>
             <hr />
