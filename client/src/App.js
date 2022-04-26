@@ -58,13 +58,13 @@ function App() {
                   Profile
                 </Nav.Link> */}
                 <div>
-                  {/* Ternary used for distplaying Login/Logout button */}
+                  {/* Ternary used for displaying Login/Logout button */}
                   {!currentUser ? (
                     <Button
                       className="mx-2 nav-login-btn"
                       as={Link}
                       to="/"
-                      variant="outline-warning"
+                      variant="outline-info"
                     >
                       Login
                     </Button>

@@ -71,13 +71,18 @@ Video.create!(
 Video.create!(
   video_url: 'https://www.youtube.com/embed/O2zG8mgY_H4', 
   title: 'alt-J live at Royal',
-  concert_id: c2.id,
+  concert_id: c3.id,
 )
 
 Video.create!(
   video_url: 'https://www.youtube.com/embed/svrDD4zsZuI', 
   title: 'alt-J live at Royal 2',
-  concert_id: c2.id,
+  concert_id: c3.id,
+)
+Video.create!(
+  video_url: 'https://www.youtube.com/embed/FI-ejiKcSDA', 
+  title: 'Tool Live',
+  concert_id: c4.id,
 )
 
 # create images
@@ -124,6 +129,35 @@ Image.create!(
   title: 'Foo Fighters Live Image 4',
   concert_id: c2.id,
 )
+
+Image.create!(
+  image_url:
+    'https://s3.amazonaws.com/sndb/uploads/photo/image/418692/large_image.jpg',
+  title: 'alt-j 1',
+  concert_id: c3.id,
+)
+
+Image.create!(
+  image_url:
+    'https://s3.amazonaws.com/sndb/uploads/photo/image/418781/large_image.jpg',
+  title: 'alt-j 2',
+  concert_id: c3.id,
+)
+
+Image.create!(
+  image_url:
+    'https://s3.amazonaws.com/sndb/uploads/photo/image/421067/large_image.jpg',
+  title: 'alt-j 3',
+  concert_id: c3.id,
+)
+
+Image.create!(
+  image_url:
+    'https://s3.amazonaws.com/sndb/uploads/photo/image/415334/large_image.jpg',
+  title: 'tool live',
+  concert_id: c4.id,
+)
+
 
 
 # create concert_comments

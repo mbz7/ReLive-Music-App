@@ -16,8 +16,13 @@ function ConcertCard({
 }) {
   return (
     <>
-      <Col sm={12} md={12} lg={12} className="gap-3 mb-4 mt-3  ">
-        <Card className="concert-card-div">
+      <Col sm={12} md={12} lg={12} className="gap-3 mb-4 mt-3">
+        <Card
+          className="concert-card-div"
+          as={Link}
+          to={`/concerts/${id}`}
+          style={{ textDecoration: "none" }}
+        >
           <div className="p-4 mt-2 text-dark gap-3">
             <Row>
               <Col
@@ -27,12 +32,7 @@ function ConcertCard({
                 className="d-flex align-items-center justify-content-center p-2"
               >
                 <div className="band-logo-container">
-                  <Image
-                    className="band-logo p-3"
-                    src={logo}
-                    alt="band_logo"
-                    
-                  />
+                  <Image className="band-logo p-3" src={logo} alt="band_logo" />
                 </div>
               </Col>
               <Col className="d-flex justify-content-center align-items-center mt-3 p-2">
