@@ -80,9 +80,9 @@ function Home({ currentUser }) {
                     </h2>
                     <Col className="text-center">
                       <h1 className="h1-grad">Welcome To ReLive</h1>
-                      <p className="p-2 text-lg mx-auto">
+                      <h4 className="p-2 text-lg mx-auto">
                         A home for all of your concert experiences
-                      </p>
+                      </h4>
                     </Col>
                     <hr className="mx-auto hr-grad" />
                     {/* <Col className="text-center">
@@ -100,21 +100,17 @@ function Home({ currentUser }) {
             <div className="concert-list-container" id="concert-list">
               <Container>
                 <Row className="d-flex align-items-center justify-content-center p-5">
-                  
                   <Col className="concert-header-div">
                     <Row className="d-flex align-items-center justify-content-center">
-                    <div className="text-center p-3 text-dark">
+                      <div className="text-center p-3 text-dark">
                         <h1>Concert List</h1>
                         <hr />
-                  </div>
+                      </div>
                       <Col lg={8} className=" search-bar-container text-center">
                         <div
                           className="ms-auto search-bar mx-auto"
                           controlId="formBasicSearch"
                         >
-                          {/* <Form.Label className="text-light p-1">
-                        <h4>Search For Concerts</h4>
-                      </Form.Label> */}
                           <input
                             type="email"
                             placeholder="Search For A Concert Here..."
@@ -140,14 +136,12 @@ function Home({ currentUser }) {
                 {/* </div> */}
 
                 <Row>
-                  <Col>
-                    <ConcertCardList
-                      concerts={filteredPost()}
-                      setConcerts={setConcerts}
-                      handleDelete={handleDelete}
-                      editPost={editPost}
-                    />
-                  </Col>
+                  <ConcertCardList
+                    concerts={filteredPost()}
+                    setConcerts={setConcerts}
+                    handleDelete={handleDelete}
+                    editPost={editPost}
+                  />
                 </Row>
               </Container>
             </div>

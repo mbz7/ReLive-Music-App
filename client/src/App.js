@@ -36,10 +36,9 @@ function App() {
     <>
       {/* <Navbar bg="dark" variant="dark"> */}
       <Navbar variant="dark">
-
         <Container>
           <Navbar.Brand as={Link} to="/home">
-            re-Live Music
+            RELIVE Music
           </Navbar.Brand>
           <div className="">
             <Navbar.Toggle aria-controls="navbarScroll" />
@@ -74,7 +73,7 @@ function App() {
                       className="mx-2 nav-login-btn"
                       as={Link}
                       to="/"
-                      variant="outline-warning"
+                      variant="outline-info"
                     >
                       Log out
                     </Button>
@@ -109,14 +108,7 @@ function App() {
               />
             }
           />
-          <Route
-            path="/home"
-            element={
-              <Home
-                currentUser={currentUser}
-              />
-            }
-          />
+          <Route path="/home" element={<Home currentUser={currentUser} />} />
           <Route
             path="/dashboard"
             element={<Dashboard currentUser={currentUser} />}
