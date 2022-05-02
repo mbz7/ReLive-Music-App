@@ -24,12 +24,12 @@ function App() {
   }
 
   // currentUser added to local storage to persist on refresh
-  useEffect(() => {
-    const data = localStorage.getItem("user-data");
-    if (data) {
-      setCurrentUser(JSON.parse(data));
-    }
-  }, []);
+  // useEffect(() => {
+  //   const data = localStorage.getItem("user-data");
+  //   if (data) {
+  //     setCurrentUser(JSON.parse(data));
+  //   }
+  // }, []);
 
   useEffect(() => {
     localStorage.setItem("user-data", JSON.stringify(currentUser));
@@ -121,10 +121,10 @@ function App() {
             }
           />
           <Route path="/home" element={<Home currentUser={currentUser} />} />
-          <Route
+          {/* <Route
             path="/dashboard"
             element={<Dashboard currentUser={currentUser} />}
-          />
+          /> */}
           <Route
             path="/account"
             element={<Account currentUser={currentUser} />}
