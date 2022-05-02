@@ -61,7 +61,7 @@ p {
     url("./img/yvette-de-wit-NYrVisodQ2M-unsplash_edit-2.jpg");
   /* background-image: url("./img/yvette-de-wit-NYrVisodQ2M-unsplash_edit-2-2.jpg"); */
   background-size: cover;
-  background-position: bottom;
+  background-position: 25% 75%;
   border-bottom: 5px solid #475668;
 }
 

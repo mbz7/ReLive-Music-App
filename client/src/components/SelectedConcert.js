@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { Row, Container, Col } from "react-bootstrap";
+import { useParams, Link } from "react-router-dom";
+import { Row, Container, Col, Button } from "react-bootstrap";
 import ConcertDetail from "./selected_concert/ConcertDetail";
 import ConcertImageList from "./selected_concert/ConcertImageList";
 import ConcertVideoList from "./selected_concert/ConcertVideoList";
@@ -80,9 +80,18 @@ function SelectedConcert({ currentUser }) {
       <Container fluid className="div-1">
         <Container className="pb-5">
           <br />
-          <br />
-          {/* Header Concert Details Section */}
-          <Col className="text-center text-dark  p-4 shadow-sm rounded div-2">
+          <Col className="text-center text-dark  p-4 shadow-sm rounded div-2 ">
+            {/* Header Concert Details Section */}
+            <Col className="d-flex align-items-center pt-3">
+              <Button
+                variant="outline-dark"
+                className="text-right btn-md btn-md"
+                as={Link}
+                to={`/home`}
+              >
+                Back To Concerts
+              </Button>
+            </Col>
             <h1>CONCERT DASHBOARD</h1>
             <hr />
 

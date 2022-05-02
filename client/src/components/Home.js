@@ -89,31 +89,8 @@ function Home({ currentUser }) {
                     A home for all of your concert experiences
                   </h4>
                 </Col>
-
-                {/* <Col
-                  lg={7}
-                  className="mx-auto rounded-lg home_jumbotron_welcome-div"
-                >
-                  <div className="text-light welcome-top-div">
-                    <h2 className="p-2 text-center">
-                      {currentUser ? `Hello, ${currentUser.first_name}!` : ""}
-                    </h2>
-                    <Col className="text-center">
-                      <h1 className="h1-grad">Welcome To ReLive</h1>
-                      <h4 className="p-2 text-lg mx-auto">
-                        A home for all of your concert experiences
-                      </h4>
-                    </Col>
-                    <hr className="mx-auto hr-grad" />
-                  </div>
-                  <Button className="btn-grad text-center" href="#concert-list">
-                    Get Started
-                  </Button>
-                </Col> */}
-                {/* <hr className="w-100 mx-auto mt-0 hr-grad-2" /> */}
               </div>
             </div>
-            {/* <div className="home-2-jumbo-gradient"><span></span></div> */}
           </Container>
           <div className="concert-list-container" id="concert-list">
             <Container>
@@ -146,12 +123,6 @@ function Home({ currentUser }) {
                 </Col>
               </Row>
               <hr />
-              {/* <hr className="w-100 mx-auto mt-2 hr-grad-2" /> */}
-              {/* <div className="justify-content-center"> */}
-
-              {/* <div className="col-md-border col-lg-2"></div> */}
-
-              {/* </div> */}
 
               <Row>
                 <ConcertCardList

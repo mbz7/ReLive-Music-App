@@ -19,8 +19,8 @@ function ConcertCard({
       <Col sm={12} md={12} lg={12} className="gap-3 mb-4 mt-3">
         <Card
           className="concert-card-div"
-          as={Link}
-          to={`/concerts/${id}`}
+          // as={Link}
+          // to={`/concerts/${id}`}
           style={{ textDecoration: "none" }}
         >
           <div className="p-4 mt-2 text-dark gap-3">
@@ -96,10 +96,11 @@ function ConcertCard({
                       // currentUser={currentUser}
                     />{" "}
                     <Button
-                      onClick={() => handleDelete(id)}
+                      // onClick={() => handleDelete(id)}
                       variant="outline-danger"
                       size="sm"
                       className="w-50"
+                      disabled
                     >
                       Delete
                     </Button>

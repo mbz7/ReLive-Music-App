@@ -12,7 +12,6 @@ function ConcertCardList({ concerts, setConcerts, handleDelete, editPost }) {
               <ConcertCard
                 key={concert.id}
                 id={concert.id}
-                
                 band={concert.band}
                 logo={concert.band_logo}
                 venue={concert.venue}
@@ -22,7 +21,6 @@ function ConcertCardList({ concerts, setConcerts, handleDelete, editPost }) {
                 handleDelete={handleDelete}
                 editPost={editPost}
                 // currentUser={currentUser}
-
               />
             );
           })}
