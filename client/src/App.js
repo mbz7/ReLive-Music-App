@@ -11,6 +11,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import UserPage from "./components/UserPage";
 import logo from "./img/relive_logo_main.png";
+import LandingPage from "./components/LandingPage";
 
 function App() {
   const [currentUser, setCurrentUser] = useState("");
@@ -88,11 +89,21 @@ function App() {
 
       <div>
         <Routes>
-          <Route
+          {/* <Route
             className={("inner", "outer")}
             path="/"
             element={
               <Login
+                setCurrentUser={setCurrentUser}
+                currentUser={currentUser}
+              />
+            }
+          /> */}
+          <Route
+            className={("inner", "outer")}
+            path="/"
+            element={
+              <LandingPage
                 setCurrentUser={setCurrentUser}
                 currentUser={currentUser}
               />
