@@ -93,6 +93,11 @@ function ConcertCard({
                     <ConcertEditModal
                       editPost={editPost}
                       id={id}
+                      editBand={band}
+                      editLogo={logo}
+                      editVenue={venue}
+                      editLocation={location}
+                      editDate={date}
                       // currentUser={currentUser}
                     />{" "}
                     <Button

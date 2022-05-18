@@ -1,14 +1,23 @@
 import React, { useState } from "react";
 import { Form, Button, Modal } from "react-bootstrap";
+import { useParams, Link } from "react-router-dom";
 
-export default function ConcertEditModal({ editPost, id }) {
+export default function ConcertEditModal({
+  editPost,
+  id,
+  editLogo,
+  editBand,
+  editVenue,
+  editLocation,
+  editDate,
+}) {
   const [show, setShow] = useState(false);
   const [logo, setLogo] = useState("");
   const [band, setBand] = useState("");
   const [venue, setVenue] = useState("");
   const [location, setLocation] = useState("");
   const [date, setDate] = useState("");
-  const [errors, setErrors] = useState([])
+  const [errors, setErrors] = useState([]);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -31,13 +40,12 @@ export default function ConcertEditModal({ editPost, id }) {
       .then((r) => r.json())
       .then((newEditPost) => {
         if (newEditPost.errors) {
-          setErrors(newEditPost.errors)
+          setErrors(newEditPost.errors);
         } else {
-          editPost(newEditPost)
+          editPost(newEditPost);
           handleClose();
         }
       });
-    
   }
 
   // function handleSubmit(e) {
@@ -89,18 +97,18 @@ export default function ConcertEditModal({ editPost, id }) {
         <Modal.Body>
           <Modal.Body>
             <div>
-            <ul>
-                {errors.map(e => {
-                return <li style={{color: "red"}}>{e}</li>
-              })}
+              <ul>
+                {errors.map((e) => {
+                  return <li style={{ color: "red" }}>{e}</li>;
+                })}
               </ul>
-              </div>
+            </div>
             <Form.Label htmlFor="inputPassword5">BAND LOGO</Form.Label>
             <Form.Control
               onChange={(e) => setLogo(e.target.value)}
               size="sm"
               type="text"
-              placeholder="Band Logo Url..."
+              placeholder={editLogo}
               className="p-2 mb-3"
             />
             <Form.Label htmlFor="inputPassword5">BAND NAMES</Form.Label>
@@ -108,7 +116,8 @@ export default function ConcertEditModal({ editPost, id }) {
               onChange={(e) => setBand(e.target.value)}
               size="sm"
               type="text"
-              placeholder="Band Name(s)"
+              placeholder={editBand}
+              // placeholder="Band Name(s)"
               className="p-2 mb-3"
             />
             <Form.Label htmlFor="inputPassword5">VENUE</Form.Label>
@@ -116,7 +125,7 @@ export default function ConcertEditModal({ editPost, id }) {
               onChange={(e) => setVenue(e.target.value)}
               size="sm"
               type="text"
-              placeholder="Venue Name"
+              placeholder={editVenue}
               className="p-2 mb-3"
             />
             <Form.Label htmlFor="inputPassword5">LOCATION</Form.Label>
@@ -124,7 +133,7 @@ export default function ConcertEditModal({ editPost, id }) {
               onChange={(e) => setLocation(e.target.value)}
               size="sm"
               type="text"
-              placeholder="City, State"
+              placeholder={editLocation}
               className="p-2 mb-3"
             />
             <Form.Label htmlFor="inputPassword5">DATE</Form.Label>
@@ -132,7 +141,7 @@ export default function ConcertEditModal({ editPost, id }) {
               onChange={(e) => setDate(e.target.value)}
               size="sm"
               type="text"
-              placeholder="00/00/000"
+              placeholder={editDate}
               className="p-2 mb-3"
             />
           </Modal.Body>

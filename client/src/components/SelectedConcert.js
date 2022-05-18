@@ -45,7 +45,7 @@ function SelectedConcert({ currentUser }) {
 
   const addVideo = (newVideo) => {
     //fetch to add image to concert
-    //inside callback once you have a new image from that post fetch:
+    //inside callback once you have a new video from that post fetch:
     setConcert((concert) => {
       return { ...concert, videos: [...concert.videos, newVideo] };
     });
@@ -53,7 +53,7 @@ function SelectedConcert({ currentUser }) {
 
   const addText = (newText) => {
     //fetch to add image to concert
-    //inside callback once you have a new image from that post fetch:
+    //inside callback once you have new text from that post fetch:
     setConcert((concert) => {
       return {
         ...concert,
