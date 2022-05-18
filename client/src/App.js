@@ -52,9 +52,16 @@ function App() {
                 <Nav.Link as={Link} to="/home">
                   Dashboard
                 </Nav.Link>
-                <Nav.Link as={Link} to="/userpage">
-                  Account
-                </Nav.Link>
+                {/* Ternary used to disable Account link if user is not logged in */}
+                {!currentUser ? (
+                  <Nav.Link as={Link} disabled={true} to="/userpage">
+                    Account
+                  </Nav.Link>
+                ) : (
+                  <Nav.Link as={Link} to="/userpage">
+                    Account
+                  </Nav.Link>
+                )}
                 {/* <Nav.Link className="mx-2" as={Link} to="/userpage">
                   Profile
                 </Nav.Link> */}
@@ -64,7 +71,7 @@ function App() {
                     <Button
                       className="mx-2 nav-login-btn"
                       as={Link}
-                      to="/"
+                      to="/login"
                       variant="outline-info"
                     >
                       Login
@@ -74,7 +81,7 @@ function App() {
                       onClick={handleLogout}
                       className="mx-2 nav-login-btn"
                       as={Link}
-                      to="/"
+                      to="/signup"
                       variant="outline-info"
                     >
                       Log out
@@ -89,16 +96,16 @@ function App() {
 
       <div>
         <Routes>
-          {/* <Route
+          <Route
             className={("inner", "outer")}
-            path="/"
+            path="/login"
             element={
               <Login
                 setCurrentUser={setCurrentUser}
                 currentUser={currentUser}
               />
             }
-          /> */}
+          />
           <Route
             className={("inner", "outer")}
             path="/"

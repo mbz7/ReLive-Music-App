@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 
 function UserPage({ currentUser, setCurrentUser }) {
   //State held for User Profile
-    // Conditional added to prevent error if state is not set
+  // Conditional added to prevent error if state is not set
   const [firstName, setFirstName] = useState(
     `${currentUser ? currentUser.first_name : null}`
   );
@@ -24,7 +24,7 @@ function UserPage({ currentUser, setCurrentUser }) {
 
   // Edit button state
   const [edit, setEdit] = useState(false);
-// Submits update by user to db
+  // Submits update by user to db
   function handleSubmit(e) {
     fetch(`/users/${currentUser.id}`, {
       method: "PATCH",
@@ -51,7 +51,7 @@ function UserPage({ currentUser, setCurrentUser }) {
         }
       });
   }
-// Deletes User's Profile
+  // Deletes User's Profile
   function handleDelete(e) {
     fetch(`/users/${currentUser.id}`, {
       method: "DELETE",
@@ -75,7 +75,13 @@ function UserPage({ currentUser, setCurrentUser }) {
                   <h1 className="text-center p-3 mb-3">Account Profile </h1>
                   <div className="account-profile-div">
                     <div className="p-2 table-responsive">
-                      <Table striped bordered hover variant="striped" className="border-dark">
+                      <Table
+                        striped
+                        bordered
+                        hover
+                        variant="striped"
+                        className="border-dark"
+                      >
                         <thead>
                           <tr>
                             <th>First Name</th>
