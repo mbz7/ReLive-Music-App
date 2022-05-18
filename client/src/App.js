@@ -89,7 +89,7 @@ function App() {
 
       <div>
         <Routes>
-          {/* <Route
+          <Route
             className={("inner", "outer")}
             path="/"
             element={
@@ -98,8 +98,8 @@ function App() {
                 currentUser={currentUser}
               />
             }
-          /> */}
-          <Route
+          />
+          {/* <Route
             className={("inner", "outer")}
             path="/"
             element={
@@ -108,7 +108,7 @@ function App() {
                 currentUser={currentUser}
               />
             }
-          />
+          /> */}
 
           <Route
             className={("inner", "outer")}
