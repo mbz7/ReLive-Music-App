@@ -108,7 +108,7 @@ function Signup({ setCurrentUser, currentUser }) {
             </Button>
             <div className="already_have_account text-dark mt-4">
               Already registered?{" "}
-              <Link className="text-dark" to="/">
+              <Link className="text-dark" to="/login">
                 Log In
               </Link>
             </div>
